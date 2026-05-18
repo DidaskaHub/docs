@@ -1,0 +1,141 @@
+---
+title: "Emissão e validação de certificados"
+description: "Como os certificados são emitidos automaticamente, como o aluno faz o download, e como qualquer pessoa valida a autenticidade pelo código único."
+---
+
+Cada modelo de certificado tem uma opção de **emissão automática**. Com ela ativada, quando o aluno atinge as condições de conclusão do curso o certificado é gerado, o aluno é notificado e pode baixar o PDF — sem você precisar emitir manualmente.
+
+<Note>
+  A funcionalidade de certificados pode estar ativa ou não na sua escola. Se não estiver disponível, verifique em **Configurações → Funcionalidades**.
+</Note>
+
+## Como a emissão automática funciona
+
+Com a emissão automática ativada no modelo, o certificado é emitido assim que o aluno cumpre os requisitos de conclusão do curso:
+
+1. **Todas as aulas obrigatórias assistidas.**
+2. **Aprovação no quiz final** — se o curso tiver um quiz com nota mínima configurada.
+
+Quando as duas condições são atendidas (ou só a primeira, se não houver quiz), a plataforma:
+
+- Gera o PDF com o modelo configurado para o curso.
+- Preenche todos os campos dinâmicos com os dados do aluno.
+- Adiciona a **marca d'água** com nome e e-mail do aluno.
+- Cria o **código de validação único**.
+- Envia uma **notificação** para o aluno na plataforma.
+- Envia um **e-mail** com o certificado em anexo (quando o e-mail está configurado na escola).
+
+Tudo isso acontece de forma instantânea, sem intervenção manual.
+
+## O que o aluno precisa fazer
+
+Quando o aluno recebe a notificação de que o certificado está disponível:
+
+<Steps>
+  <Step title="Acesse os certificados">
+    No menu da plataforma, clique em **Meu perfil → Meus certificados** (ou clique direto na notificação recebida).
+  </Step>
+  <Step title="Localize o certificado">
+    Todos os certificados emitidos aparecem em uma lista, com o nome do curso e a data de conclusão.
+  </Step>
+  <Step title="Baixe o PDF">
+    Clique em **Baixar certificado**. O PDF é gerado e o download começa imediatamente.
+  </Step>
+</Steps>
+
+O certificado pode ser baixado quantas vezes o aluno quiser. Não há prazo de expiração para o download.
+
+## Marca d'água de proteção
+
+Cada certificado tem uma marca d'água discreta com o **nome completo e o e-mail do aluno**. Ela aparece levemente impressa no fundo do documento.
+
+O objetivo é desincentivar o compartilhamento indevido do PDF. Se o arquivo circular, qualquer pessoa que o receber consegue ver facilmente quem é o titular legítimo.
+
+<Info>
+  A marca d'água é adicionada automaticamente em todos os certificados. Não é possível desativá-la por questões de integridade do documento.
+</Info>
+
+## Código de validação
+
+Cada certificado recebe um código único no momento da emissão. Esse código:
+
+- Aparece no PDF (você define a posição no modelo usando o campo dinâmico **Código de validação**).
+- É permanente — não muda mesmo se o modelo for atualizado ou o certificado for reemitido.
+- Pode ser usado por qualquer pessoa para verificar a autenticidade.
+
+## Validação pública
+
+Qualquer pessoa pode validar um certificado — sem precisar ter conta na Didaska.
+
+<Steps>
+  <Step title="Acesse a página de validação">
+    A URL de validação é `validar.didaska.com.br` (ou o endereço informado no próprio certificado).
+  </Step>
+  <Step title="Informe o código">
+    Digite o código de validação que aparece no certificado e clique em **Verificar**.
+  </Step>
+  <Step title="Veja os dados">
+    Se o certificado for válido, a página exibe:
+    - Nome completo do aluno.
+    - Nome do curso concluído.
+    - Nome da escola emissora.
+    - Data de conclusão.
+  </Step>
+</Steps>
+
+<Check>
+  A validação confirma que o certificado foi emitido pela escola na Didaska e que os dados são autênticos. Certificados falsificados ou alterados não passam pela validação.
+</Check>
+
+### O que acontece se o código não for encontrado?
+
+Se o código informado não existir no sistema, a página de validação exibe uma mensagem de alerta. Isso pode acontecer se:
+
+- O código foi digitado incorretamente.
+- O certificado foi emitido fora da plataforma Didaska.
+- O certificado foi falsificado.
+
+## Reemissão de certificados
+
+Você pode reemitir os certificados já emitidos nos seguintes casos:
+
+- **Atualização do modelo:** o certificado passa a usar o novo layout.
+- **Correção de dados:** se o nome do aluno estava incorreto no cadastro, corrija o cadastro primeiro e então reemita.
+
+Para reemitir, acesse **Certificados** no painel, localize o certificado do aluno e clique em **Reemitir**.
+
+<Warning>
+  A reemissão substitui o PDF anterior. O código de validação é mantido, mas o documento é gerado novamente com os dados e o modelo atuais. Se o aluno já salvou ou imprimiu o certificado anterior, oriente-o a baixar a versão nova.
+</Warning>
+
+### Atualizou o modelo?
+
+Se você mudou o modelo do certificado, os certificados já emitidos continuam com a versão antiga. Para que um aluno receba a versão atualizada, faça a **reemissão** do certificado dele. Avalie reemitir conforme a necessidade — uma mudança pequena de layout nem sempre justifica reemitir para todos.
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O certificado tem prazo de validade?">
+    Não. Os certificados emitidos pela Didaska não expiram. O aluno pode baixar e validar o documento a qualquer momento, mesmo anos depois.
+  </Accordion>
+  <Accordion title="E se o aluno perder o PDF?">
+    O aluno pode acessar **Meus certificados** a qualquer momento e baixar o PDF novamente. O arquivo fica armazenado na plataforma indefinidamente.
+  </Accordion>
+  <Accordion title="Posso emitir um certificado manualmente para um aluno?">
+    Sim. Na lista de alunos do curso, localize o aluno e clique em **Emitir certificado manualmente**. Use essa opção quando o aluno concluiu o curso fora da plataforma ou em circunstâncias especiais.
+  </Accordion>
+  <Accordion title="O certificado é emitido em outros idiomas?">
+    Os campos dinâmicos (nome, curso, data) são preenchidos como estão cadastrados. Os textos fixos do certificado (como "Certificamos que") precisam ser escritos manualmente no modelo, no idioma desejado.
+  </Accordion>
+</AccordionGroup>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Criar e personalizar modelos" icon="layout" href="/certificados/modelos">
+    Configure o visual do certificado com a identidade da sua escola.
+  </Card>
+  <Card title="Visão geral dos certificados" icon="award" href="/certificados/visao-geral">
+    Revise como os certificados funcionam na Didaska.
+  </Card>
+</CardGroup>

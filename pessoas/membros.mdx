@@ -1,0 +1,134 @@
+---
+title: "Membros"
+description: "Como criar, editar, excluir e importar membros da sua escola na Didaska."
+---
+
+Membros são todas as pessoas que têm acesso à sua escola: proprietários, administradores, professores e alunos. Nesta página você aprende a gerenciar cada um deles.
+
+## Papéis disponíveis
+
+Cada membro tem um papel que define o que ele pode ver e fazer na plataforma.
+
+| Papel | O que pode fazer |
+|---|---|
+| **Proprietário** | Acesso total, incluindo faturamento e exclusão da escola. |
+| **Administrador** | Gerencia tudo, exceto faturamento e dados do proprietário. |
+| **Professor** | Cria e gerencia seus próprios cursos, vê alunos matriculados. |
+| **Aluno** | Acessa apenas os cursos em que está matriculado. |
+
+<Note>
+  Só pode haver um proprietário por escola. O papel de proprietário não pode ser atribuído a outros membros — apenas transferido.
+</Note>
+
+## Criar um membro
+
+<Steps>
+  <Step title="Acesse a área de Membros">
+    No menu lateral, clique em **Pessoas** e depois em **Membros**.
+  </Step>
+  <Step title="Clique em Novo membro">
+    No canto superior direito, clique em **Novo membro**.
+  </Step>
+  <Step title="Preencha os dados">
+    Informe o **nome completo**, o **e-mail** e o **papel** do novo membro. Você também pode definir uma senha manualmente ou deixar a plataforma gerar uma senha automática — nesse caso, o membro receberá as instruções de acesso por e-mail.
+  </Step>
+  <Step title="Matricule em cursos (opcional)">
+    Ainda nessa tela, você pode matricular o membro em um ou mais cursos antes de salvar.
+  </Step>
+  <Step title="Salve o cadastro">
+    Clique em **Criar membro**. O membro já pode acessar a plataforma com as credenciais cadastradas.
+  </Step>
+</Steps>
+
+## Editar um membro
+
+<Steps>
+  <Step title="Localize o membro">
+    Na lista de **Membros**, use a busca pelo nome ou e-mail para encontrá-lo rapidamente.
+  </Step>
+  <Step title="Abra o cadastro">
+    Clique no nome do membro para abrir o painel de detalhes.
+  </Step>
+  <Step title="Faça as alterações">
+    Você pode editar o **nome**, o **e-mail**, o **papel** e as **matrículas** do membro. Também é possível bloquear ou desbloquear o acesso sem precisar excluir o cadastro.
+  </Step>
+  <Step title="Salve">
+    Clique em **Salvar alterações**.
+  </Step>
+</Steps>
+
+<Tip>
+  Bloquear o acesso é útil quando você precisa suspender temporariamente um membro sem perder o histórico dele. O membro bloqueado não consegue entrar na plataforma, mas os dados ficam preservados.
+</Tip>
+
+## Excluir um membro
+
+<Warning>
+  A exclusão é permanente. Todo o histórico de progresso, notas e interações do membro será removido. Prefira bloquear o acesso quando a situação for temporária.
+</Warning>
+
+<Steps>
+  <Step title="Abra o cadastro do membro">
+    Na lista de **Membros**, clique no nome do membro.
+  </Step>
+  <Step title="Clique em Excluir">
+    Role até o final do painel e clique em **Excluir membro**.
+  </Step>
+  <Step title="Confirme a exclusão">
+    Digite o e-mail do membro para confirmar e clique em **Excluir permanentemente**.
+  </Step>
+</Steps>
+
+## Importar membros em massa
+
+Se você precisa cadastrar muitas pessoas de uma vez, use a importação por planilha.
+
+<Steps>
+  <Step title="Prepare o arquivo CSV">
+    Crie uma planilha com duas colunas: **nome** e **e-mail**. Salve no formato CSV (valores separados por vírgula).
+
+    Exemplo de estrutura:
+    ```
+    nome,email
+    Ana Lima,ana@escola.com
+    Carlos Souza,carlos@escola.com
+    ```
+
+    Os membros importados entram como aluno. O papel e as matrículas em cursos podem ser ajustados depois, na edição de cada membro ou pelas turmas.
+  </Step>
+  <Step title="Acesse a importação">
+    Na página de **Membros**, clique em **Importar membros**.
+  </Step>
+  <Step title="Envie o arquivo">
+    Selecione ou arraste o arquivo CSV para a área indicada.
+  </Step>
+  <Step title="Revise o mapeamento">
+    A plataforma mostrará uma prévia das informações reconhecidas. Confira se as colunas foram lidas corretamente e corrija qualquer divergência.
+  </Step>
+  <Step title="Confirme a importação">
+    Clique em **Importar**. Os membros são criados com uma senha inicial (conforme a configuração da escola) e recebem as instruções de primeiro acesso por e-mail.
+  </Step>
+</Steps>
+
+<Info>
+  Membros com e-mails que já existem na plataforma não são duplicados — a importação atualiza o cadastro existente.
+</Info>
+
+## Filtrar e buscar membros
+
+Na lista de membros, você pode:
+
+- **Buscar** pelo nome ou e-mail usando a barra de pesquisa.
+- **Filtrar** por papel (professor, aluno etc.) usando o menu de filtros.
+- **Ordenar** por nome, data de cadastro ou último acesso.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Turmas" icon="users" href="/pessoas/turmas">
+    Organize alunos em turmas e conecte-as a cursos e professores.
+  </Card>
+  <Card title="Convites" icon="envelope" href="/pessoas/convites">
+    Crie códigos de convite para que novos alunos se matriculem sozinhos.
+  </Card>
+</CardGroup>

@@ -1,0 +1,108 @@
+---
+title: "Criar e configurar um simulado"
+description: "Aprenda a criar um simulado, escolher as questões e definir as regras da prova: tempo, tentativas, nota mínima e janela de disponibilidade."
+---
+
+Criar um simulado é rápido. Você define as questões, configura as regras e publica para seus alunos em poucos minutos. Este guia mostra cada etapa do processo.
+
+## Antes de começar
+
+Você precisa ter questões cadastradas no banco de questões para montar o simulado. Se ainda não criou nenhuma, comece por lá.
+
+<CardGroup cols={2}>
+  <Card title="Banco de questões" icon="database" href="/simulados/banco-de-questoes">
+    Crie ou importe questões antes de montar o simulado.
+  </Card>
+</CardGroup>
+
+## Criando o simulado
+
+<Steps>
+  <Step title="Abra a seção de simulados">
+    No menu lateral, clique em **Simulados** e depois em **Criar simulado**.
+  </Step>
+  <Step title="Dê um nome e uma descrição">
+    Preencha o **Título** do simulado — é o que o aluno vai ver. A **Descrição** é opcional, mas ajuda a contextualizar a prova (ex.: "Avaliação bimestral — módulo 3").
+  </Step>
+  <Step title="Adicione as questões">
+    Clique em **Adicionar questões** para abrir o banco de questões. Você pode:
+    - Selecionar questões individualmente.
+    - Filtrar por tópico, dificuldade ou tipo de questão e selecionar em lote.
+    - Reordenar as questões arrastando e soltando.
+
+    O número total de questões e a pontuação estimada são atualizados automaticamente.
+  </Step>
+  <Step title="Configure as regras da prova">
+    Aqui você define como a prova vai funcionar. Veja cada opção nas seções abaixo.
+  </Step>
+  <Step title="Defina o público">
+    Escolha se o simulado é para uma turma específica ou para todos os alunos do curso.
+  </Step>
+  <Step title="Salve e publique">
+    Clique em **Salvar rascunho** para finalizar depois, ou em **Publicar** para disponibilizar imediatamente. Você pode alterar o status a qualquer momento.
+  </Step>
+</Steps>
+
+## Configurações da prova
+
+### Tempo limite
+
+Ative o **Tempo limite** e defina a duração em minutos. Quando o tempo acabar, o simulado é enviado automaticamente com as respostas preenchidas até aquele momento.
+
+O cronômetro é sincronizado com o servidor — ele não pausa se o aluno trocar de aba ou minimizar o navegador.
+
+<Tip>
+  Para provas longas ou dissertativas, deixe uma margem confortável. Um bom ponto de partida é 1,5 a 2 minutos por questão objetiva.
+</Tip>
+
+### Número máximo de tentativas
+
+Por padrão, o aluno pode fazer o simulado quantas vezes quiser. Se quiser limitar, ative **Máximo de tentativas** e informe o número. Após atingir o limite, o simulado aparece bloqueado para aquele aluno.
+
+<Note>
+  Quando o aluno faz mais de uma tentativa, a nota considerada para o relatório é a **maior** entre elas.
+</Note>
+
+### Nota mínima de aprovação
+
+Ative **Nota de aprovação** e defina o percentual (ex.: 70%). O aluno vê claramente se foi aprovado ou reprovado ao receber o resultado. Essa nota também é usada para:
+- Liberar o certificado do curso (quando configurado).
+- Conceder pontos de gamificação (quando ativado).
+
+### Embaralhar questões
+
+Ative **Embaralhar questões** para que cada aluno receba as perguntas em uma ordem diferente. Isso reduz a chance de cola em avaliações presenciais ou síncronas.
+
+Você também pode ativar **Embaralhar alternativas** para questões de múltipla escolha, misturando também a ordem das opções de resposta.
+
+### Janela de disponibilidade
+
+Defina uma **Data e hora de início** e uma **Data e hora de término** para controlar quando o simulado fica acessível. Fora desse período, o aluno vê o simulado listado, mas não consegue iniciá-lo.
+
+<Info>
+  Todos os horários seguem o fuso horário configurado na sua escola. Confirme as configurações em **Configurações → Escola** antes de aplicar provas com horário exato.
+</Info>
+
+## Editando um simulado já publicado
+
+Você pode editar título, descrição e configurações a qualquer momento. Porém, **alterar as questões de um simulado com respostas já registradas pode afetar os resultados**. Nesses casos, a plataforma exibe um aviso de confirmação.
+
+Para adicionar uma nova versão da prova sem afetar resultados anteriores, crie um novo simulado e arquive o anterior.
+
+## Arquivando e duplicando simulados
+
+- **Arquivar:** o simulado sai da listagem dos alunos, mas os resultados são preservados.
+- **Duplicar:** cria uma cópia com todas as configurações, útil para reutilizar a estrutura em turmas diferentes.
+
+Ambas as opções estão no menu de ações (ícone de três pontos) ao lado do simulado.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Banco de questões" icon="database" href="/simulados/banco-de-questoes">
+    Organize suas questões por tópico e dificuldade.
+  </Card>
+  <Card title="Correção e resultados" icon="check-circle" href="/simulados/correcao-e-resultados">
+    Veja como corrigir dissertativas e analisar o desempenho da turma.
+  </Card>
+</CardGroup>

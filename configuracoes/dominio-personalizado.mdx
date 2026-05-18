@@ -1,0 +1,89 @@
+---
+title: "Domínio personalizado"
+description: "Conecte o endereço da sua marca à plataforma e ofereça uma experiência completamente personalizada aos seus alunos."
+---
+
+Com o **domínio personalizado**, seus alunos acessam a plataforma pelo endereço da sua marca — por exemplo, `escola.suaempresa.com` — em vez do endereço padrão da Didaska. A conexão usa certificado de segurança (SSL), provisionado automaticamente pela plataforma.
+
+Para configurar, abra **Configurações → Domínio personalizado**.
+
+---
+
+## Como funciona
+
+A configuração é feita em duas etapas: você cria um registro DNS no painel do seu provedor de domínio, e a Didaska valida e ativa o endereço automaticamente.
+
+<Steps>
+  <Step title="Informe o subdomínio desejado">
+    No campo **Seu domínio**, digite o endereço que você quer usar. Exemplos: `cursos.minhaescola.com.br`, `ead.empresa.com`, `alunos.academia.com.br`.
+  </Step>
+  <Step title="Copie as instruções de DNS">
+    A Didaska vai mostrar o tipo de registro e o valor que você precisa adicionar no painel do seu registrador de domínio (ex.: Registro.br, GoDaddy, Cloudflare, Hostinger).
+  </Step>
+  <Step title="Adicione o registro no seu provedor">
+    Acesse o painel do seu provedor, vá até as configurações de DNS e adicione o registro conforme as instruções. Salve as alterações.
+  </Step>
+  <Step title="Aguarde a validação">
+    Clique em **Verificar domínio**. A propagação de DNS pode levar de alguns minutos até 48 horas, dependendo do provedor. A Didaska verifica automaticamente e ativa o domínio assim que detectar o registro.
+  </Step>
+  <Step title="Pronto!">
+    Quando o status mudar para **Ativo**, seu domínio está funcionando. O certificado SSL é emitido automaticamente — seus alunos veem o cadeado de segurança no navegador.
+  </Step>
+</Steps>
+
+---
+
+## Certificado SSL incluso
+
+O certificado SSL garante que a comunicação entre seus alunos e a plataforma é criptografada (conexão segura com HTTPS). Você não precisa instalar nem renovar o certificado manualmente — a plataforma cuida do provisionamento e da renovação.
+
+<Check>
+Seus alunos verão o cadeado de segurança na barra do navegador, o que aumenta a confiança na sua escola.
+</Check>
+
+---
+
+## Status do domínio
+
+Na tela de configuração você pode acompanhar o status:
+
+| Status | O que significa |
+|---|---|
+| **Pendente** | O registro DNS ainda não foi detectado |
+| **Verificando** | A Didaska está confirmando o registro |
+| **Ativo** | Domínio funcionando com SSL |
+| **Erro** | O registro não foi encontrado ou está incorreto |
+
+Se o status ficar em **Erro** por mais de 24 horas, verifique se o registro foi adicionado corretamente no painel do seu provedor e clique em **Verificar novamente**.
+
+---
+
+## Dúvidas frequentes
+
+<AccordionGroup>
+  <Accordion title="Posso usar o domínio raiz (ex.: minhaescola.com.br)?">
+    Recomendamos usar um subdomínio (como `cursos.minhaescola.com.br`) porque a configuração de domínio raiz pode interferir em outros serviços do seu site, como e-mail e páginas institucionais. Se precisar usar o domínio raiz, entre em contato com o suporte.
+  </Accordion>
+  <Accordion title="Quanto tempo leva a propagação do DNS?">
+    Em geral, entre 5 minutos e 2 horas. Em casos raros, pode levar até 48 horas. Esse prazo depende do seu provedor de DNS, não da Didaska.
+  </Accordion>
+  <Accordion title="O que acontece com o endereço padrão?">
+    Enquanto o domínio personalizado está ativo, o endereço padrão da Didaska continua funcionando e redireciona automaticamente para o seu domínio.
+  </Accordion>
+  <Accordion title="Posso trocar de domínio depois?">
+    Sim. Você pode remover o domínio atual e adicionar um novo a qualquer momento. Durante a transição, o endereço padrão da Didaska permanece ativo para não interromper o acesso dos alunos.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Aparência e marca" icon="palette" href="/configuracoes/aparencia-e-marca">
+    Personalize logo, cores e imagem de fundo da sua escola.
+  </Card>
+  <Card title="Site builder" icon="layout" href="/configuracoes/site-builder">
+    Crie uma página inicial no seu domínio com o editor visual.
+  </Card>
+</CardGroup>

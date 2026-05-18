@@ -1,0 +1,119 @@
+---
+title: "Pagamentos"
+description: "Configure o gateway de pagamento para vender cursos e gerenciar o acesso financeiro dos alunos."
+---
+
+Em **Pagamentos** você conecta o gateway de cobrança da sua escola e define como o acesso aos cursos pagos é liberado e bloqueado automaticamente.
+
+Para acessar, abra **Configurações → Pagamentos**.
+
+---
+
+## Como funciona
+
+A Didaska atua como a plataforma de ensino; o processamento financeiro fica com o gateway que você escolher. Isso significa:
+
+- **A Didaska não cobra comissão sobre as suas vendas** — o recebimento acontece na sua conta do gateway.
+- **Suas regras, seu controle** — cupons de desconto, parcelamento e regras antifraude são configurados diretamente no seu gateway.
+- **Liberação por pagamento** — quando o pagamento é confirmado, o acesso do aluno é liberado. Quando a assinatura é cancelada, o acesso é encerrado conforme as regras do plano.
+
+---
+
+## Gateways disponíveis
+
+<CardGroup cols={2}>
+  <Card title="Stripe" icon="credit-card">
+    Gateway internacional com suporte a cartão de crédito. Boa opção para quem também atende alunos fora do Brasil.
+  </Card>
+  <Card title="AbacatePay" icon="credit-card">
+    Solução focada em PIX, prática para vendas no Brasil.
+  </Card>
+</CardGroup>
+
+<Note>
+A lista de gateways pode crescer ao longo do tempo. As opções ativas aparecem na própria tela de **Pagamentos**.
+</Note>
+
+---
+
+## Conectando um gateway
+
+<Steps>
+  <Step title="Escolha o gateway">
+    Na lista de gateways disponíveis, clique em **Conectar** ao lado do que você usa.
+  </Step>
+  <Step title="Informe as credenciais">
+    A Didaska pedirá a chave de API ou token de acesso do gateway. Você encontra essa informação no painel da sua conta no gateway.
+  </Step>
+  <Step title="Salve e teste">
+    Após salvar, você pode realizar uma cobrança de teste para confirmar que a conexão está funcionando corretamente.
+  </Step>
+  <Step title="Ative nos cursos">
+    Com o gateway conectado, você pode definir o preço de cada curso em **Cursos → [nome do curso] → Acesso e preço**.
+  </Step>
+</Steps>
+
+---
+
+## Liberação e bloqueio automáticos
+
+| Evento | O que acontece |
+|---|---|
+| **Pagamento confirmado** | O acesso ao curso é liberado |
+| **Assinatura ativa** | O aluno mantém o acesso enquanto a assinatura estiver ativa |
+| **Assinatura cancelada** | O acesso é encerrado conforme as regras do plano |
+
+<Tip>
+Você pode consultar o histórico de pagamentos e o status de acesso de cada aluno em **Pessoas → Membros**.
+</Tip>
+
+---
+
+## Trocando de gateway
+
+Você pode trocar de gateway quando precisar. O histórico de alunos é preservado; faça a troca em um horário de baixo movimento para uma transição tranquila.
+
+<Steps>
+  <Step title="Conecte o novo gateway">
+    Siga as mesmas etapas de conexão com o novo gateway.
+  </Step>
+  <Step title="Desconecte o gateway anterior">
+    Clique em **Desconectar** ao lado do gateway que você não vai mais usar.
+  </Step>
+</Steps>
+
+<Warning>
+Após desconectar o gateway anterior, novas cobranças serão feitas pelo novo gateway. Assinaturas ativas no gateway anterior precisam ser migradas ou encerradas diretamente na conta daquele serviço.
+</Warning>
+
+---
+
+## Dúvidas frequentes
+
+<AccordionGroup>
+  <Accordion title="Posso usar dois gateways ao mesmo tempo?">
+    Não. A Didaska opera com um gateway ativo por vez. Isso garante que as cobranças e o controle de acesso sejam consistentes.
+  </Accordion>
+  <Accordion title="O aluno paga dentro da plataforma?">
+    Sim. O checkout é exibido dentro da sua escola, com a sua identidade visual, e o processamento é feito pelo gateway conectado.
+  </Accordion>
+  <Accordion title="Como configuro cupons de desconto?">
+    Cupons são gerenciados no painel do seu gateway de pagamento, não na Didaska. Consulte a documentação do gateway para saber como criar e gerenciar cupons.
+  </Accordion>
+  <Accordion title="E o parcelamento?">
+    O número máximo de parcelas e as taxas de parcelamento também são definidos no painel do seu gateway.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Integrações" icon="plug" href="/configuracoes/integracoes">
+    Veja todas as integrações disponíveis na plataforma.
+  </Card>
+  <Card title="Faturamento" icon="receipt" href="/configuracoes/faturamento">
+    Gerencie seu plano Didaska e veja o histórico de cobranças.
+  </Card>
+</CardGroup>

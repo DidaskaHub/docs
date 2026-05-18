@@ -1,0 +1,125 @@
+---
+title: "Modelos de certificado"
+description: "Crie e personalize o modelo do certificado da sua escola: layout, campos dinâmicos, logo, assinatura e suporte a frente e verso."
+---
+
+O modelo define a aparência do certificado que seus alunos recebem. Você pode criar um modelo com a identidade visual da sua escola — cores, logo, fontes e layout — e definir quais informações aparecem em cada posição.
+
+<Note>
+  A funcionalidade de certificados pode estar ativa ou não na sua escola. Se você não vê a seção **Certificados** no painel, verifique em **Configurações → Funcionalidades**.
+</Note>
+
+## Acessando os modelos
+
+No menu lateral, clique em **Certificados → Modelos**. Você vê todos os modelos criados na sua escola. Um curso pode usar apenas um modelo por vez, mas você pode ter vários modelos — por exemplo, um para cursos livres e outro para especializações.
+
+## Criando um modelo
+
+<Steps>
+  <Step title="Abra o editor de modelos">
+    Clique em **Novo modelo**. O editor abre com um modelo em branco no formato paisagem (padrão para certificados).
+  </Step>
+  <Step title="Escolha o layout base">
+    Selecione um dos layouts pré-definidos como ponto de partida, ou comece do zero. Os layouts incluem sugestões de posicionamento para logo, título, campos do aluno e assinatura.
+  </Step>
+  <Step title="Adicione e posicione os elementos">
+    Arraste os elementos para a posição desejada na área do certificado. Você pode adicionar:
+    - **Campos dinâmicos** (nome do aluno, data de início, data de conclusão) e o **código de validação**
+    - **Texto fixo** (ex.: "Certificamos que", "Concluiu com êxito")
+    - **Imagens** (logo da escola, brasão, assinatura digitalizada)
+    - **Formas e linhas** decorativas
+  </Step>
+  <Step title="Personalize o visual">
+    Selecione qualquer elemento para ajustar:
+    - **Fonte**, tamanho e cor do texto.
+    - **Cor de fundo** do certificado.
+    - **Bordas e sombras** dos elementos.
+  </Step>
+  <Step title="Configure frente e verso (opcional)">
+    Ative **Frente e verso** para adicionar uma segunda face ao certificado. O verso é ideal para incluir a grade curricular, carga horária detalhada ou informações sobre a escola.
+  </Step>
+  <Step title="Salve o modelo">
+    Clique em **Salvar modelo** e dê um nome que ajude a identificá-lo (ex.: "Certificado Padrão 2025" ou "Especialização — Frente e Verso").
+  </Step>
+</Steps>
+
+## Campos dinâmicos
+
+Campos dinâmicos são preenchidos automaticamente com os dados de cada aluno no momento em que o certificado é gerado. Você insere o campo no modelo uma vez, e a plataforma substitui pelo valor real na hora da emissão.
+
+### Campos disponíveis
+
+| Campo | O que aparece no certificado |
+|---|---|
+| **Nome do aluno** | Nome completo cadastrado na conta do aluno |
+| **Data de início** | Data em que o aluno começou o curso |
+| **Data de conclusão** | Data em que o aluno completou o curso |
+
+Informações como o **nome do curso** e o **nome da escola** entram como texto fixo no modelo. O **código de validação** é gerado pela plataforma para cada certificado e exibido na posição que você definir no modelo.
+
+<Tip>
+  Deixe o **código de validação** em destaque no certificado. Ele é o que permite a qualquer pessoa verificar a autenticidade do documento.
+</Tip>
+
+## Adicionando logo e assinatura
+
+### Logo da escola
+
+Para adicionar a logo, clique em **Inserir imagem** e faça o upload do arquivo. Formatos aceitos: PNG e SVG. Para melhor qualidade, use um arquivo com fundo transparente (PNG sem fundo ou SVG).
+
+### Assinatura
+
+Você pode incluir uma assinatura de duas formas:
+
+- **Imagem:** faça o upload de uma foto da assinatura digitalizada.
+- **Texto:** use o nome do responsável com uma fonte cursiva para simular uma assinatura.
+
+Adicione abaixo da assinatura um texto fixo com o nome e o cargo do responsável (ex.: "João Silva — Diretor Acadêmico").
+
+## Frente e verso
+
+Quando ativado, o certificado em PDF tem duas páginas: a frente com os dados de conclusão e o verso com o conteúdo que você configurar. Sugestões para o verso:
+
+- Ementa ou grade curricular do curso.
+- Carga horária por módulo.
+- Informações sobre a escola e a metodologia.
+- Logo e contato da instituição.
+
+## Pré-visualizando o modelo
+
+Antes de salvar, clique em **Pré-visualizar** para ver como o certificado vai ficar com dados reais. A plataforma preenche os campos dinâmicos com dados fictícios de exemplo.
+
+## Associando o modelo a um curso
+
+O modelo não é vinculado automaticamente a todos os cursos. Você precisa associá-lo manualmente.
+
+<Steps>
+  <Step title="Abra o curso">
+    Vá em **Cursos**, selecione o curso desejado e clique em **Configurações do curso**.
+  </Step>
+  <Step title="Ative o certificado">
+    Na seção **Certificado**, ative a opção e selecione o modelo que deseja usar.
+  </Step>
+  <Step title="Salve">
+    Clique em **Salvar**. O certificado será emitido automaticamente quando os alunos concluírem o curso.
+  </Step>
+</Steps>
+
+## Atualizando um modelo existente
+
+Você pode editar um modelo a qualquer momento. Porém, certificados que já foram emitidos **não são atualizados automaticamente** — eles mantêm o layout do momento em que foram gerados. Para reeditar os certificados já emitidos com o novo layout, use a opção de reemissão.
+
+<Warning>
+  A reemissão substitui os PDFs anteriores dos alunos, mas mantém o mesmo código de validação. Avise seus alunos se precisar fazer uma reemissão em larga escala.
+</Warning>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Emissão e validação" icon="shield-check" href="/certificados/emissao-e-validacao">
+    Entenda como a emissão automática funciona e como validar um certificado.
+  </Card>
+  <Card title="Visão geral dos certificados" icon="award" href="/certificados/visao-geral">
+    Revise os conceitos básicos de certificados na Didaska.
+  </Card>
+</CardGroup>

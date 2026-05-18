@@ -1,0 +1,106 @@
+---
+title: "Segurança e sessões"
+description: "Controle quantos dispositivos e sessões simultâneas cada aluno pode usar para evitar o compartilhamento de conta."
+---
+
+Em **Segurança e sessões** você define regras para controlar o acesso dos alunos e reduzir o compartilhamento indevido de contas. Você também acompanha as sessões ativas da escola em tempo real.
+
+Para acessar, abra **Configurações → Segurança e sessões**.
+
+---
+
+## Por que isso é importante
+
+Quando alunos compartilham login com outras pessoas, você perde receita e o controle do acesso. Os limites de dispositivos e sessões ajudam a coibir esse comportamento sem prejudicar quem usa a conta de forma legítima.
+
+---
+
+## Limite de dispositivos
+
+Define em quantos dispositivos diferentes um aluno pode fazer login.
+
+- **Sem limite** — o aluno pode acessar de qualquer número de dispositivos (padrão se não configurado).
+- **Limite definido** — ao tentar fazer login em um dispositivo novo além do limite, o aluno recebe uma mensagem informando que o limite foi atingido.
+
+<Tip>
+Um limite pequeno de dispositivos costuma ser suficiente para cobrir o uso legítimo (celular, computador e tablet) sem permitir compartilhamento em larga escala.
+</Tip>
+
+---
+
+## Limite de sessões simultâneas
+
+Define quantas pessoas podem estar logadas na mesma conta ao mesmo tempo.
+
+- **1 sessão** — apenas um dispositivo pode estar ativo por vez. Se alguém fizer login em outro lugar, a sessão mais antiga é desconectada automaticamente.
+- **2 ou mais sessões** — permite que o aluno esteja logado em mais de um lugar ao mesmo tempo (ex.: celular e computador).
+
+<Note>
+Quando o limite de sessões é ultrapassado, **a sessão mais antiga é encerrada automaticamente**. O aluno que estava estudando receberá uma mensagem informando que sua sessão foi encerrada em outro dispositivo.
+</Note>
+
+---
+
+## Como configurar
+
+<Steps>
+  <Step title="Abra Configurações → Segurança e sessões">
+    Você verá os campos de limite de dispositivos e sessões simultâneas.
+  </Step>
+  <Step title="Defina os limites">
+    Insira os valores desejados. Para desativar um limite, deixe o campo em branco ou selecione **Sem limite**.
+  </Step>
+  <Step title="Salve">
+    Clique em **Salvar**. As regras passam a valer imediatamente para novos logins. Sessões já abertas não são encerradas nesse momento.
+  </Step>
+</Steps>
+
+---
+
+## Sessões ativas
+
+A seção **Sessões ativas** mostra todas as sessões abertas na plataforma no momento. Para cada sessão você vê:
+
+| Informação | Detalhe |
+|---|---|
+| **Aluno** | Nome e e-mail da conta |
+| **Dispositivo** | Tipo de dispositivo (celular, computador, tablet) |
+| **Localização aproximada** | Cidade e país detectados pelo IP |
+| **Último acesso** | Data e hora da última atividade |
+
+### Encerrando uma sessão manualmente
+
+Se você identificar uma sessão suspeita ou quiser desconectar um aluno específico, clique em **Encerrar sessão** ao lado do registro. O aluno será deslogado imediatamente.
+
+<Warning>
+Encerrar uma sessão ativa desconecta o aluno sem aviso prévio. Use essa ação com atenção para não interromper alunos no meio de uma aula.
+</Warning>
+
+---
+
+## Dúvidas frequentes
+
+<AccordionGroup>
+  <Accordion title="O aluno é avisado quando a sessão é encerrada por limite?">
+    Sim. O aluno vê uma mensagem explicando que a sessão foi encerrada porque o limite de sessões simultâneas foi atingido. Ele pode fazer login novamente normalmente.
+  </Accordion>
+  <Accordion title="O limite se aplica a professores e admins?">
+    Os limites de dispositivos e sessões se aplicam a alunos. Administradores e professores têm acesso sem restrições por padrão.
+  </Accordion>
+  <Accordion title="O que acontece se um aluno trocar de dispositivo com frequência?">
+    Se o limite de dispositivos for atingido, o aluno precisará remover um dispositivo da lista antes de adicionar um novo. Isso é feito pelo aluno no próprio perfil dele.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Membros" icon="users" href="/pessoas/membros">
+    Gerencie os alunos cadastrados e o acesso deles aos cursos.
+  </Card>
+  <Card title="Funcionalidades" icon="toggle-right" href="/configuracoes/funcionalidades">
+    Ative ou desative recursos da escola conforme o seu plano.
+  </Card>
+</CardGroup>

@@ -1,12 +1,12 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "name": "Didaska",
+  "description": "Documentação oficial da Didaska: aprenda a montar sua escola online, criar cursos, gerenciar alunos e configurar a plataforma do seu jeito.",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#2B57A4",
+    "light": "#4DAAB9",
+    "dark": "#2B57A4"
   },
   "favicon": "/favicon.ico",
   "icons": {
@@ -16,82 +16,173 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": ["copy", "view"]
   },
   "navigation": {
     "global": {
       "anchors": [
         {
-          "anchor": "Home",
+          "anchor": "Início",
           "icon": "house",
           "href": "/"
         },
         {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
+          "anchor": "Acessar a plataforma",
+          "icon": "log-in",
+          "href": "https://didaska.com.br"
         },
         {
-          "anchor": "Help",
+          "anchor": "Suporte",
           "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
+          "href": "mailto:suporte@didaska.com.br"
         }
       ]
     },
     "directory": "card",
     "groups": [
       {
-        "group": "Platform",
-        "icon": "layers",
+        "group": "Comece aqui",
+        "icon": "rocket",
         "expanded": true,
         "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
+          "comece-aqui/o-que-e-didaska",
+          "comece-aqui/primeiros-passos",
+          "comece-aqui/conceitos",
+          "comece-aqui/papeis-e-permissoes",
+          "comece-aqui/planos"
         ]
       },
       {
-        "group": "Analytics",
-        "icon": "chart-bar",
+        "group": "Cursos e conteúdo",
+        "icon": "book-open",
         "expanded": true,
         "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
+          "cursos/visao-geral",
+          "cursos/criar-curso",
+          "cursos/modulos-e-aulas",
+          "cursos/editor-de-aulas",
+          "cursos/videos",
+          "cursos/aulas-ao-vivo",
+          "cursos/quizzes",
+          "cursos/progresso"
         ]
       },
       {
-        "group": "Integrations",
-        "icon": "plug",
+        "group": "Simulados e avaliações",
+        "icon": "clipboard-check",
         "expanded": true,
         "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+          "simulados/visao-geral",
+          "simulados/criar-simulado",
+          "simulados/banco-de-questoes",
+          "simulados/correcao-e-resultados",
+          "simulados/fazer-simulado"
+        ]
+      },
+      {
+        "group": "Certificados",
+        "icon": "award",
+        "expanded": true,
+        "pages": [
+          "certificados/visao-geral",
+          "certificados/modelos",
+          "certificados/emissao-e-validacao"
+        ]
+      },
+      {
+        "group": "Engajamento",
+        "icon": "flame",
+        "expanded": true,
+        "pages": [
+          "engajamento/gamificacao",
+          "engajamento/ranking",
+          "engajamento/comunidade",
+          "engajamento/notificacoes"
+        ]
+      },
+      {
+        "group": "Didaska AI",
+        "icon": "sparkles",
+        "expanded": true,
+        "pages": [
+          "didaska-ai/visao-geral",
+          "didaska-ai/assistente-de-estudos",
+          "didaska-ai/plano-de-estudos-e-flashcards",
+          "didaska-ai/creditos-de-ia"
+        ]
+      },
+      {
+        "group": "Monitoria",
+        "icon": "calendar-clock",
+        "expanded": true,
+        "pages": [
+          "monitoria/visao-geral",
+          "monitoria/configurar-disponibilidade",
+          "monitoria/agendar-sessao"
+        ]
+      },
+      {
+        "group": "Pessoas e turmas",
+        "icon": "users",
+        "expanded": true,
+        "pages": [
+          "pessoas/membros",
+          "pessoas/turmas",
+          "pessoas/lista-de-presenca",
+          "pessoas/convites",
+          "pessoas/documentos"
+        ]
+      },
+      {
+        "group": "Configurações da plataforma",
+        "icon": "settings",
+        "expanded": true,
+        "pages": [
+          "configuracoes/aparencia-e-marca",
+          "configuracoes/dominio-personalizado",
+          "configuracoes/modelos-de-email",
+          "configuracoes/integracoes",
+          "configuracoes/pagamentos",
+          "configuracoes/seguranca-e-sessoes",
+          "configuracoes/site-builder",
+          "configuracoes/faturamento",
+          "configuracoes/funcionalidades"
+        ]
+      },
+      {
+        "group": "Guia do aluno",
+        "icon": "graduation-cap",
+        "expanded": true,
+        "pages": [
+          "aluno/primeiro-acesso",
+          "aluno/navegar-nos-cursos",
+          "aluno/acompanhar-progresso",
+          "aluno/perfil-e-preferencias"
         ]
       }
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/didaska-light.png",
+    "dark": "/logo/didaska-dark.png"
   },
   "navbar": {
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Acessar plataforma",
+      "href": "https://didaska.com.br"
     }
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
-    }
+    "links": [
+      {
+        "header": "Didaska",
+        "items": [
+          { "label": "Site oficial", "href": "https://didaska.com.br" },
+          { "label": "Suporte", "href": "mailto:suporte@didaska.com.br" }
+        ]
+      }
+    ]
   }
 }

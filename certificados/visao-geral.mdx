@@ -1,0 +1,74 @@
+---
+title: "Visão geral dos certificados"
+description: "Entenda como os certificados funcionam na Didaska: quando são emitidos, o que contêm e como qualquer pessoa pode validar sua autenticidade."
+---
+
+O certificado é o reconhecimento formal de que o aluno completou o curso com sucesso. Na Didaska, os certificados podem ser emitidos automaticamente (configurável no modelo), têm visual personalizado com a identidade da sua escola e podem ser validados publicamente por qualquer pessoa — sem precisar de login.
+
+<Note>
+  A funcionalidade de certificados pode estar ativa ou não na sua escola. Se você não vê a seção **Certificados** no painel, entre em contato com o administrador da escola ou verifique em **Configurações → Funcionalidades**.
+</Note>
+
+## Quando um certificado é emitido
+
+Com a emissão automática ativada no modelo, o certificado é gerado quando o aluno conclui o curso. Para isso, ele precisa:
+
+1. **Assistir a todas as aulas** marcadas como obrigatórias no curso.
+2. **Ser aprovado no quiz final** — se o curso tiver um quiz de conclusão com nota mínima configurada.
+
+Assim que essas condições são atendidas, o certificado é emitido na hora. O aluno recebe uma notificação e pode fazer o download imediatamente.
+
+<Tip>
+  Se você não configurou nota mínima no quiz, o certificado é emitido assim que o aluno completa todas as aulas, independentemente do desempenho.
+</Tip>
+
+## O que o certificado contém
+
+Cada certificado inclui os seguintes dados:
+
+- **Nome completo** do aluno.
+- **Nome do curso** concluído.
+- **Nome da escola** (e logo, quando configurada no modelo).
+- **Data de conclusão**.
+- **Assinatura** do responsável (quando configurada no modelo).
+- **Código de validação único** — para verificar a autenticidade.
+
+Você pode personalizar o layout, as fontes, as cores e os campos exibidos. O certificado pode ter **frente e verso**.
+
+## Código de validação
+
+Cada certificado recebe um código único gerado automaticamente. Qualquer pessoa pode acessar a página pública de validação da Didaska, informar esse código e confirmar:
+
+- **Nome do aluno**.
+- **Curso concluído**.
+- **Data de emissão**.
+- **Nome da escola**.
+
+Não é preciso ter uma conta na plataforma para validar. Isso é especialmente útil quando o aluno apresenta o certificado para empregadores, instituições de ensino ou parceiros.
+
+## Marca d'água de proteção
+
+Todos os certificados em PDF incluem uma **marca d'água com o nome e o e-mail do aluno**. Isso desencoraja o compartilhamento indevido — se alguém redistribuir o PDF, a identidade do titular fica visível.
+
+## Como o aluno recebe o certificado
+
+Quando o certificado é emitido:
+
+1. O aluno recebe uma **notificação** na plataforma e, se configurado, por **e-mail**.
+2. O certificado aparece na seção **Meus certificados** do perfil do aluno.
+3. O aluno pode fazer o **download em PDF** a qualquer momento.
+
+## Reemissão ao atualizar o modelo
+
+Se você atualizar o modelo do certificado (por exemplo, mudar o layout ou adicionar uma nova assinatura), pode solicitar a **reemissão** dos certificados já emitidos para que usem o novo modelo. Os códigos de validação são preservados.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Criar e personalizar modelos" icon="layout" href="/certificados/modelos">
+    Aprenda a configurar o visual do certificado da sua escola.
+  </Card>
+  <Card title="Emissão e validação" icon="shield-check" href="/certificados/emissao-e-validacao">
+    Veja como funciona a emissão automática e a validação pública por código.
+  </Card>
+</CardGroup>

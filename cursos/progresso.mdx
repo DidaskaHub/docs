@@ -1,0 +1,138 @@
+---
+title: "Progresso dos alunos"
+description: "Entenda como o progresso é registrado automaticamente e como professores, administradores e alunos acompanham o avanço no curso."
+---
+
+A Didaska registra automaticamente o progresso de cada aluno à medida que ele avança pelo curso. Nenhuma configuração extra é necessária: assim que o aluno conclui uma aula, o sistema atualiza o registro.
+
+## O que é registrado
+
+Para cada aluno matriculado, a plataforma acompanha:
+
+| O que é registrado | Detalhes |
+|-------------------|---------|
+| **Aulas concluídas** | Quais aulas foram finalizadas e em qual data |
+| **Tempo gasto** | Tempo total de estudo por aula e por curso |
+| **Resultado dos quizzes** | Pontuação obtida em cada tentativa |
+| **Retomada automática** | O ponto exato onde o aluno parou em cada aula |
+| **Presença em aulas ao vivo** | Registro de quem entrou e por quanto tempo ficou |
+
+---
+
+## Como uma aula é considerada concluída
+
+A lógica de conclusão varia de acordo com o tipo de aula:
+
+<Tabs>
+  <Tab title="Aula em texto">
+    O aluno precisa rolar até o final do conteúdo da aula. Quando ele chega à última linha, a aula é marcada automaticamente como concluída.
+  </Tab>
+  <Tab title="Aula em vídeo">
+    O player registra o percentual assistido. Quando o aluno atinge o percentual mínimo configurado (por padrão, 90% do vídeo), a aula é considerada concluída.
+  </Tab>
+  <Tab title="Aula ao vivo">
+    A presença é registrada automaticamente pelo check-in da sala. Alunos que participaram da sessão têm a aula marcada como concluída.
+
+    Alunos que assistirem à gravação posteriormente também podem ter a aula concluída, seguindo a mesma regra das aulas em vídeo.
+  </Tab>
+  <Tab title="Aula com quiz">
+    Quando uma aula possui um quiz com nota mínima de aprovação configurada, o aluno precisa atingir essa nota para que a aula seja considerada concluída — independentemente do tipo de conteúdo.
+  </Tab>
+</Tabs>
+
+---
+
+## Retomada automática
+
+Quando o aluno retorna a uma aula em vídeo ou ao vivo (gravação), o player inicia automaticamente do ponto onde ele parou. Isso garante continuidade no aprendizado sem que o aluno precise procurar onde estava.
+
+<Tip>
+  Incentive os alunos a usar o botão **Marcar como concluída** nas aulas em texto caso queiram registrar a conclusão antes de chegar ao final — por exemplo, em materiais de referência que eles já conhecem.
+</Tip>
+
+---
+
+## Acompanhar o progresso como professor ou administrador
+
+Você pode ver o progresso de todos os alunos de um curso em um único painel.
+
+<Steps>
+  <Step title="Abra o curso">
+    No menu lateral, vá em **Cursos** e clique no curso desejado.
+  </Step>
+  <Step title="Acesse a aba Progresso">
+    Clique na aba **Progresso** (ou **Relatórios**, dependendo do layout) dentro do curso.
+  </Step>
+  <Step title="Visualize os dados">
+    Você verá uma tabela com todos os alunos matriculados. Para cada um, são exibidos:
+    - Percentual de conclusão do curso
+    - Número de aulas concluídas
+    - Resultados dos quizzes
+    - Tempo total de estudo
+  </Step>
+  <Step title="Veja o detalhe de um aluno">
+    Clique no nome de um aluno para ver o progresso aula a aula, com datas e pontuações individuais.
+  </Step>
+</Steps>
+
+---
+
+## Como o aluno acompanha o próprio progresso
+
+Os alunos têm acesso ao próprio progresso a qualquer momento.
+
+Dentro de cada curso, uma **barra de progresso** mostra o percentual de conclusão. No menu lateral do aluno, a seção **Meu progresso** exibe todos os cursos em andamento com o status de cada um.
+
+Veja mais no guia do aluno: [Acompanhar progresso](/aluno/acompanhar-progresso).
+
+---
+
+## Progresso e certificado
+
+O progresso tem relação direta com a emissão do certificado. A lógica padrão é:
+
+1. O aluno conclui **todas as aulas** do curso.
+2. Se houver quizzes com nota mínima, o aluno precisa ter **aprovado** em todos eles.
+3. Quando as condições são atendidas, o certificado é **emitido automaticamente**.
+
+<Note>
+  As regras de certificação podem ser personalizadas. Consulte [Certificados](/certificados/visao-geral) para entender as opções de configuração.
+</Note>
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O progresso é atualizado em tempo real?">
+    Sim. Assim que o aluno conclui uma aula ou envia um quiz, o progresso é atualizado imediatamente. Você pode acompanhar em tempo real no painel de progresso do curso.
+  </Accordion>
+  <Accordion title="E se o aluno reiniciar uma aula já concluída?">
+    O progresso registrado não é perdido. A aula permanece marcada como concluída mesmo que o aluno a assista novamente.
+  </Accordion>
+  <Accordion title="É possível resetar o progresso de um aluno?">
+    Sim. No painel de progresso do curso, acesse o detalhe do aluno e use a opção **Resetar progresso**. Isso remove as marcações de conclusão e os resultados de quizzes daquele aluno naquele curso.
+  </Accordion>
+  <Accordion title="O tempo gasto em aulas ao vivo é registrado?">
+    Sim. O Didaska Stream registra o tempo de permanência de cada participante na sessão. Para provedores externos (Google Meet ou YouTube ao vivo), o registro de presença depende da integração disponível com o provedor.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Certificados" icon="award" href="/certificados/visao-geral">
+    Configure a emissão automática ao concluir o curso.
+  </Card>
+  <Card title="Quizzes" icon="circle-check" href="/cursos/quizzes">
+    Veja como os quizzes influenciam o progresso e a conclusão.
+  </Card>
+  <Card title="Guia do aluno" icon="graduation-cap" href="/aluno/acompanhar-progresso">
+    Como os alunos visualizam o próprio avanço.
+  </Card>
+  <Card title="Pessoas e membros" icon="users" href="/pessoas/membros">
+    Gerencie os alunos matriculados nos cursos.
+  </Card>
+</CardGroup>
