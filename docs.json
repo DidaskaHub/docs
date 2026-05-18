@@ -22,19 +22,22 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Início",
-          "icon": "house",
-          "href": "/"
-        },
-        {
-          "anchor": "Acessar a plataforma",
+          "anchor": "Website",
           "icon": "log-in",
-          "href": "https://didaska.com.br"
+          "href": "https://didaska.com.br",
+          "color": {
+            "light": "#4DAAB9",
+            "dark": "#4DAAB9"
+          }
         },
         {
           "anchor": "Suporte",
           "icon": "life-buoy",
-          "href": "mailto:suporte@didaska.com.br"
+          "href": "mailto:suporte@didaska.com.br",
+          "color": {
+            "light": "#4DAAB9",
+            "dark": "#4DAAB9"
+          }
         }
       ]
     },
