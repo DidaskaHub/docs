@@ -8,7 +8,7 @@
     "light": "#4DAAB9",
     "dark": "#2B57A4"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.png",
   "icons": {
     "library": "lucide"
   },
@@ -22,18 +22,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Website",
+          "anchor": "Site",
           "icon": "log-in",
           "href": "https://didaska.com.br",
-          "color": {
-            "light": "#4DAAB9",
-            "dark": "#4DAAB9"
-          }
-        },
-        {
-          "anchor": "Suporte",
-          "icon": "life-buoy",
-          "href": "mailto:suporte@didaska.com.br",
           "color": {
             "light": "#4DAAB9",
             "dark": "#4DAAB9"
@@ -85,6 +76,7 @@
       {
         "group": "Certificados",
         "icon": "award",
+        "tag": "Em breve",
         "expanded": true,
         "pages": [
           "certificados/visao-geral",
@@ -95,6 +87,7 @@
       {
         "group": "Engajamento",
         "icon": "flame",
+        "tag": "Em breve",
         "expanded": true,
         "pages": [
           "engajamento/gamificacao",
@@ -117,6 +110,7 @@
       {
         "group": "Monitoria",
         "icon": "calendar-clock",
+        "tag": "Em breve",
         "expanded": true,
         "pages": [
           "monitoria/visao-geral",
@@ -144,12 +138,50 @@
           "configuracoes/aparencia-e-marca",
           "configuracoes/dominio-personalizado",
           "configuracoes/modelos-de-email",
-          "configuracoes/integracoes",
-          "configuracoes/pagamentos",
           "configuracoes/seguranca-e-sessoes",
           "configuracoes/site-builder",
           "configuracoes/faturamento",
           "configuracoes/funcionalidades"
+        ]
+      },
+      {
+        "group": "Integrações",
+        "icon": "plug",
+        "expanded": true,
+        "pages": [
+          "integracoes/visao-geral",
+          {
+            "group": "Streaming",
+            "icon": "play",
+            "pages": [
+              "integracoes/youtube",
+              "integracoes/panda-video",
+              "integracoes/vimeo"
+            ]
+          },
+          {
+            "group": "Gateway de pagamentos",
+            "icon": "credit-card",
+            "pages": [
+              "integracoes/stripe",
+              "integracoes/abacatepay"
+            ]
+          },
+          {
+            "group": "Comunicação",
+            "icon": "calendar",
+            "pages": [
+              "integracoes/google-meet",
+              "integracoes/google-calendar"
+            ]
+          },
+          {
+            "group": "Produtividade",
+            "icon": "notebook-pen",
+            "pages": [
+              "integracoes/notion"
+            ]
+          }
         ]
       },
       {
@@ -173,8 +205,8 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Acessar plataforma",
-      "href": "https://didaska.com.br"
+      "label": "Fale com o nosso time",
+      "href": "https://didaska.com.br/contato"
     }
   },
   "footer": {
@@ -183,7 +215,7 @@
         "header": "Didaska",
         "items": [
           { "label": "Site oficial", "href": "https://didaska.com.br" },
-          { "label": "Suporte", "href": "mailto:suporte@didaska.com.br" }
+          { "label": "Fale com o nosso time", "href": "https://didaska.com.br/contato" }
         ]
       }
     ]
