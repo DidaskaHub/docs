@@ -1,0 +1,35 @@
+name: Docs CI
+
+# Valida a documentação Mintlify a cada PR: links internos quebrados.
+# Fecha o gap de não dar para rodar `mint broken-links` em todo ambiente local.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  broken-links:
+    name: Verificar links quebrados
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar Mintlify CLI
+        run: npm i -g mint@4
+
+      - name: Validar links internos
+        run: mint broken-links
