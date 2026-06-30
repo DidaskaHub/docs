@@ -149,3 +149,37 @@ img.nav-logo {
   max-width: 132px;
   object-fit: contain;
 }
+
+/* ==========================================================================
+   Paginação do rodapé em PT-BR — "Anterior" / "Próximo"
+   --------------------------------------------------------------------------
+   O Mintlify não oferece configuração para traduzir os botões "Previous"/
+   "Next" do rodapé das páginas, e não publica nomes de classe estáveis para
+   esse componente. Esta regra esconde o texto em inglês e injeta o texto em
+   PT-BR via pseudo-elemento.
+
+   ⚠️ VALIDAR NO PREVIEW (mint dev / deploy): inspecione o rodapé de paginação
+   e confirme/ajuste o seletor `.eyebrow` abaixo. Enquanto o seletor não casar
+   com o DOM real, a regra é inofensiva (não quebra o build, apenas não age).
+   Alternativa oficial: configurar o locale `pt-BR` em navigation.languages —
+   porém isso reestrutura a navegação e pode prefixar as URLs do site, então
+   só deve ser feito após validação visual no preview.
+   ========================================================================== */
+[data-pagination] a .eyebrow,
+.pagination a .eyebrow,
+a[href] .footer-pagination-label {
+  font-size: 0;
+}
+[data-pagination] a .eyebrow::after,
+.pagination a .eyebrow::after,
+a[href] .footer-pagination-label::after {
+  font-size: 0.75rem;
+}
+[data-pagination] a:first-child .eyebrow::after,
+.pagination a:first-child .eyebrow::after {
+  content: "Anterior";
+}
+[data-pagination] a:last-child .eyebrow::after,
+.pagination a:last-child .eyebrow::after {
+  content: "Próximo";
+}

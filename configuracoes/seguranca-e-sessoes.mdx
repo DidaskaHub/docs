@@ -1,11 +1,11 @@
 ---
 title: "Segurança e sessões"
-description: "Controle dispositivos conectados e sessões simultâneas por aluno na Didaska e evite compartilhamento de conta com limites de login e bloqueio automático."
+description: "Acompanhe as sessões ativas da sua escola na Didaska e entenda a proteção automática contra compartilhamento de conta, com limites de dispositivos e de sessões definidos pela plataforma."
 ---
 
-Em **Segurança e sessões** você define regras para controlar o acesso dos alunos e reduzir o compartilhamento indevido de contas. Você também acompanha as sessões ativas da escola em tempo real.
+Em **Anti-Compartilhamento** você acompanha as sessões ativas da escola em tempo real e entende como a Didaska protege as contas contra o compartilhamento indevido. A proteção é automática: você não precisa configurar limites.
 
-Para acessar, abra **Configurações → Segurança e sessões**.
+Para acessar, abra **Configurações → Anti-Compartilhamento**.
 
 ---
 
@@ -15,45 +15,17 @@ Quando alunos compartilham login com outras pessoas, você perde receita e o con
 
 ---
 
-## Limite de dispositivos
+## Como a Didaska protege as contas
 
-Define em quantos dispositivos diferentes um aluno pode fazer login.
+Os limites de acesso são definidos pela própria plataforma e valem para todas as escolas. Você não precisa configurar nada — a proteção funciona automaticamente.
 
-- **Sem limite** — o aluno pode acessar de qualquer número de dispositivos (padrão se não configurado).
-- **Limite definido** — ao tentar fazer login em um dispositivo novo além do limite, o aluno recebe uma mensagem informando que o limite foi atingido.
-
-<Tip>
-Um limite pequeno de dispositivos costuma ser suficiente para cobrir o uso legítimo (celular, computador e tablet) sem permitir compartilhamento em larga escala.
-</Tip>
-
----
-
-## Limite de sessões simultâneas
-
-Define quantas pessoas podem estar logadas na mesma conta ao mesmo tempo.
-
-- **1 sessão** — apenas um dispositivo pode estar ativo por vez. Se alguém fizer login em outro lugar, a sessão mais antiga é desconectada automaticamente.
-- **2 ou mais sessões** — permite que o aluno esteja logado em mais de um lugar ao mesmo tempo (ex.: celular e computador).
+- **Até 5 dispositivos por conta** — cada aluno pode usar a conta em até cinco dispositivos diferentes (por exemplo, celular, computador e tablet).
+- **Até 3 sessões ao mesmo tempo** — cada conta pode ter no máximo três sessões abertas simultaneamente.
+- **Login novo derruba o mais antigo** — quando esse limite é ultrapassado, a sessão (ou o dispositivo) mais antigo é encerrado automaticamente assim que um novo login acontece.
 
 <Note>
-Quando o limite de sessões é ultrapassado, **a sessão mais antiga é encerrada automaticamente**. O aluno que estava estudando receberá uma mensagem informando que sua sessão foi encerrada em outro dispositivo.
+Quando uma sessão é encerrada por esse limite, o aluno que estava estudando recebe uma mensagem informando que a sessão foi encerrada em outro dispositivo. Ele pode entrar novamente sem problema.
 </Note>
-
----
-
-## Como configurar
-
-<Steps>
-  <Step title="Abra Configurações → Segurança e sessões">
-    Você verá os campos de limite de dispositivos e sessões simultâneas.
-  </Step>
-  <Step title="Defina os limites">
-    Insira os valores desejados. Para desativar um limite, deixe o campo em branco ou selecione **Sem limite**.
-  </Step>
-  <Step title="Salve">
-    Clique em **Salvar**. As regras passam a valer imediatamente para novos logins. Sessões já abertas não são encerradas nesse momento.
-  </Step>
-</Steps>
 
 ---
 
@@ -84,11 +56,11 @@ Encerrar uma sessão ativa desconecta o aluno sem aviso prévio. Use essa ação
   <Accordion title="O aluno é avisado quando a sessão é encerrada por limite?">
     Sim. O aluno vê uma mensagem explicando que a sessão foi encerrada porque o limite de sessões simultâneas foi atingido. Ele pode fazer login novamente normalmente.
   </Accordion>
-  <Accordion title="O limite se aplica a professores e admins?">
-    Os limites de dispositivos e sessões se aplicam a alunos. Administradores e professores têm acesso sem restrições por padrão.
+  <Accordion title="A quem se aplicam esses limites?">
+    A proteção contra compartilhamento foi pensada principalmente para o acesso dos alunos. Se tiver dúvida sobre como ela afeta a sua equipe, confirme com a administração da plataforma.
   </Accordion>
   <Accordion title="O que acontece se um aluno trocar de dispositivo com frequência?">
-    Se o limite de dispositivos for atingido, o aluno precisará remover um dispositivo da lista antes de adicionar um novo. Isso é feito pelo aluno no próprio perfil dele.
+    Quando o aluno passa do limite de dispositivos, o acesso mais antigo é liberado automaticamente ao fazer um novo login. Assim ele continua conseguindo entrar a partir do dispositivo atual.
   </Accordion>
 </AccordionGroup>
 
@@ -101,6 +73,6 @@ Encerrar uma sessão ativa desconecta o aluno sem aviso prévio. Use essa ação
     Gerencie os alunos cadastrados e o acesso deles aos cursos.
   </Card>
   <Card title="Funcionalidades" icon="toggle-right" href="/configuracoes/funcionalidades">
-    Ative ou desative recursos da escola conforme o seu plano.
+    Veja os recursos disponíveis na sua escola conforme o plano.
   </Card>
 </CardGroup>
