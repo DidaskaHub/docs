@@ -1,0 +1,47 @@
+---
+title: Backup e restauração
+description: O que salvar, com que frequência, e como testar se funciona.
+---
+
+import ApenasPaas from '/snippets/apenas-paas.mdx';
+
+<ApenasPaas />
+
+No PaaS, o backup é seu. Configure antes de cadastrar gente de verdade.
+
+## O que precisa ser salvo
+
+| Item | O que é | Frequência sugerida |
+|---|---|---|
+| Banco de dados | Cursos, pessoas, progresso, avaliações | Diária |
+| Armazenamento de objetos | Vídeos, materiais, imagens, anexos | Diária |
+| `.env` e licença | Configuração da instalação | A cada alteração |
+
+Salvar o banco sem os objetos deixa a plataforma com conteúdo faltando. Os dois
+andam juntos e do mesmo instante.
+
+## Restaurar
+
+<Steps>
+  <Step title="Pare a aplicação">
+    ```bash
+    docker compose stop app worker
+    ```
+  </Step>
+  <Step title="Restaure banco e objetos">
+    Do mesmo ponto no tempo. Restaurar de momentos diferentes deixa referência
+    apontando para arquivo que não existe.
+  </Step>
+  <Step title="Suba e verifique">
+    ```bash
+    docker compose up -d
+    docker compose run --rm app doctor
+    ```
+  </Step>
+</Steps>
+
+<Warning>
+  **Backup nunca restaurado não existe.** Faça um teste de restauração num
+  servidor separado ao menos uma vez por trimestre. É a única forma de saber se
+  o seu backup funciona antes de precisar dele.
+</Warning>
