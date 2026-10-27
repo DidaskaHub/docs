@@ -1,0 +1,118 @@
+---
+title: Vender no Marketplace
+description: Cursos, arquivos, pacotes, serviços e Clubes de assinatura à venda na vitrine e em página pública, no cartão (Stripe) e no Pix (AbacatePay), com cupons e o relatório de vendas.
+---
+
+O **Marketplace** é onde a escola vende. Quem compra pode ser um **membro**,
+pela vitrine dentro da plataforma, ou um **visitante**, pela página pública
+de cada produto — a conta dele nasce na compra.
+
+100% do que é vendido é da escola: a Didaska não cobra comissão.
+
+## Ligar o Marketplace
+
+Em **Configurações → Geral → Funcionalidades**, ligue **Marketplace**. Ligado,
+ele aparece na barra lateral (a vitrine e **Minhas compras**) e em
+**Gerenciar** (produtos, cupons e vendas). Só a **dona** e os
+**administradores** gerenciam; professores e alunos compram.
+
+Escolas que já vendiam pela antiga Central de vendas já estão com o
+Marketplace ligado, e os produtos de antes viraram produtos do tipo curso,
+com os mesmos links.
+
+## Conectar as formas de pagamento
+
+Em **Gerenciar → Integrações → Pagamentos**:
+
+- **Cartão — Stripe.** Conecte a conta Stripe da escola. Aceita pagamento à
+  vista e **assinatura** (mensal ou anual).
+- **Pix — AbacatePay.** Cole a **chave da API** do AbacatePay da escola. A
+  chave fica guardada cifrada e não aparece mais na tela. Depois, cadastre o
+  webhook no painel do AbacatePay com o **endereço** e o **segredo** que a
+  tela mostra — é por ele que o Pix pago chega na hora. Chave de teste
+  (`abc_dev_…`) só recebe Pix de teste.
+
+Sem boleto e sem parcelamento.
+
+## Os tipos de produto
+
+| Tipo | O que a pessoa recebe depois de pagar |
+| --- | --- |
+| **Curso** | A matrícula no curso. Pode ser **assinatura** (só no cartão): se ela for cancelada, a matrícula sai. |
+| **Arquivo** | O download do arquivo (ebook, PDF, planilha, áudio…), por um link que vale 5 minutos e é gerado de novo a cada clique. |
+| **Pacote** | Cursos e/ou arquivos juntos. |
+| **Serviço** | As instruções que você escreveu e um link (agenda de mentoria, grupo, formulário). Só aparecem depois de pago. |
+| **Clube** | Por assinatura (mensal ou anual, no cartão ou no Pix), uma seleção de cursos e arquivos — e, se você quiser, os cursos novos. Veja [Clube de assinatura](/produto/marketplace/clube-de-assinatura). |
+
+Cada produto tem **título**, **endereço** (`/comprar/<endereço>`),
+**descrição**, **capa**, **preço** e um **preço "de"** opcional (aparece
+riscado). Você escolhe **as formas aceitas** (entre as conectadas) e **onde
+ele aparece**: na **vitrine** dos membros, num **link público**, ou nos dois.
+
+O produto nasce como **rascunho**. **Publicar** confere que as formas
+escolhidas estão conectadas e que os cursos estão publicados. Produto que já
+vendeu não pode ser excluído — **arquive**.
+
+## Cupons
+
+Em **Gerenciar → Marketplace → Cupons**: um código (por exemplo `PROMO10`),
+**%** ou **valor fixo**, **validade**, **limite de usos** e, se quiser, os
+**produtos** em que vale. Só conta como uso a venda **paga**; uma compra em
+andamento segura a vaga por até 30 minutos. O desconto nunca deixa a compra
+abaixo de R$ 1,00.
+
+Em produto de **assinatura**, você escolhe no cupom por quanto tempo o
+desconto vale: **só na primeira cobrança** (o padrão), **nos primeiros meses**
+(de 1 a 36) ou **em todas as renovações**. Em pagamento à vista e no Pix, o
+desconto vale na compra, que é uma cobrança só.
+
+## Como a compra acontece
+
+1. A pessoa escolhe a forma e, se tiver, o cupom; o preço é calculado na hora.
+2. **Cartão:** ela paga na página segura do Stripe. **Pix:** o QR Code e o
+   copia-e-cola aparecem na própria página, valendo 30 minutos.
+3. Quando o pagamento é confirmado, o acesso é liberado e ela recebe o
+   e-mail **Compra confirmada** (com o comprovante, no cartão). Quem
+   conectou o gateway recebe **Nova venda**. O texto da **Compra confirmada**
+   é editável em **Templates de e-mail**; o aviso de **Nova venda** é um
+   e-mail da Didaska e tem texto fixo.
+
+Quem comprou pela página pública sem ter conta recebe a conta com o e-mail
+da compra e um link para definir a senha.
+
+## Cartão salvo e compra com um clique
+
+Na vitrine, quem compra no cartão vê a caixa **"Salvar este cartão para
+compras futuras"**, já marcada. Desmarcada, nada fica salvo. O cartão fica
+guardado **na conta Stripe da escola** — a Didaska guarda só a bandeira, o
+final e a validade, nunca o número. Pix e a página pública (quem compra sem
+conta) não salvam cartão.
+
+Na próxima compra, o produto mostra **"Pagar com Visa final 4242"**: um
+clique cobra o cartão salvo, inclusive em assinatura. Se o banco pedir
+confirmação (3D Secure), ela aparece na própria tela. Cartão recusado ou
+vencido não cobra nada, e a pessoa pode usar outro cartão.
+
+Em **Perfil → Pagamentos**, cada pessoa vê os cartões salvos nesta escola
+(e pode removê-los — a assinatura em andamento continua) e o **histórico de
+pagamentos**: compras no cartão e no Pix e cada renovação de assinatura, com
+o status e a fatura ou o recibo para abrir.
+
+## Minhas compras
+
+Cada pessoa vê o que comprou, o status e o que a compra liberou: os cursos,
+os arquivos para baixar e o serviço.
+
+## Reembolso e contestação
+
+O reembolso é feito **no painel do gateway** (Stripe ou AbacatePay). Quando
+ele chega, ou quando o pagamento é contestado, o acesso sai: a matrícula
+(se nenhuma outra compra der o mesmo curso), os arquivos e o serviço. A
+venda fica marcada como reembolsada ou contestada.
+
+## Vendas
+
+Em **Gerenciar → Marketplace → Vendas**: a lista com filtros (produto,
+período, status, forma de pagamento e gateway), os totais do recorte e a
+**exportação em CSV**. Em cada integração de pagamento, o relatório mostra as
+mesmas vendas, só daquele gateway.

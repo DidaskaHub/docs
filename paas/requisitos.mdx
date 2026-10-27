@@ -1,0 +1,52 @@
+---
+title: Requisitos
+description: O que você precisa ter antes de instalar a Didaska na sua infraestrutura.
+---
+
+import ApenasPaas from '/snippets/apenas-paas.mdx';
+
+<ApenasPaas />
+
+O Didaska PaaS roda em um único servidor, com Docker. Não é necessário
+Kubernetes nem equipe de infraestrutura dedicada.
+
+## Servidor
+
+| | Mínimo | Recomendado |
+|---|---|---|
+| vCPU | 4 | 8 |
+| Memória | 8 GB | 16 GB |
+| Disco | 100 GB SSD | 250 GB SSD |
+| Sistema | Linux com Docker Engine 24+ e Compose v2 | |
+
+O dimensionamento depende de quantos alunos usam ao mesmo tempo, não de quantos
+estão cadastrados. Provas com muitos alunos simultâneos são o pico da carga.
+
+## Rede
+
+- Um domínio apontando para o servidor.
+- Portas 80 e 443 acessíveis, para emissão e renovação do certificado TLS.
+- Saída HTTPS para o nosso registry, para baixar as imagens.
+
+<Note>
+  Instalação em rede fechada é suportada. As imagens e a licença são entregues
+  por outro meio, e a plataforma funciona sem qualquer acesso externo. Combine
+  isso com a gente antes.
+</Note>
+
+## Contas que você fornece
+
+A edição PaaS usa as suas próprias contas nos serviços externos:
+
+| Serviço | Para quê | Obrigatório |
+|---|---|---|
+| SMTP | Envio de e-mail | Sim |
+| Provedor de IA | Didaska AI | Não — sem ele, a IA fica desligada |
+| Provedor de vídeo | Hospedagem de aula em vídeo | Não |
+| Gateway de pagamento | Venda de curso | Não |
+
+## O que você assume
+
+Backup, atualização, monitoramento, disponibilidade e segurança do servidor
+passam a ser sua responsabilidade. Se isso não é desejável, o
+[Didaska SaaS](/saas/primeiros-passos) faz tudo isso por você.

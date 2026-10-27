@@ -1,0 +1,75 @@
+---
+title: Instalação
+description: Suba a plataforma no seu servidor em poucos passos.
+---
+
+import ApenasPaas from '/snippets/apenas-paas.mdx';
+
+<ApenasPaas />
+
+## Antes de começar
+
+Você recebe da nossa equipe:
+
+- as credenciais de acesso ao registry de imagens;
+- o pacote de instalação, com `docker-compose.yml` e `.env.example`;
+- o arquivo de licença e o certificado de ativação.
+
+## Passo a passo
+
+<Steps>
+  <Step title="Autentique no registry">
+    Use as credenciais recebidas. Elas são exclusivas da sua licença.
+
+    ```bash
+    docker login registry.didaska.com.br
+    ```
+  </Step>
+  <Step title="Prepare a configuração">
+    Copie `.env.example` para `.env` e preencha o domínio, o SMTP e as senhas
+    de banco. Os campos obrigatórios estão marcados no arquivo.
+
+    ```bash
+    cp .env.example .env
+    ```
+  </Step>
+  <Step title="Coloque a licença no lugar">
+    O arquivo de licença vai no caminho indicado no `.env`. A plataforma não
+    sobe sem ele.
+  </Step>
+  <Step title="Verifique o ambiente">
+    O comando confere versão do Docker, portas, DNS, permissões e conteúdo do
+    `.env` antes de você subir qualquer coisa.
+
+    ```bash
+    docker compose run --rm app doctor
+    ```
+  </Step>
+  <Step title="Suba">
+    A primeira execução aplica as migrações do banco e emite o certificado TLS.
+
+    ```bash
+    docker compose up -d
+    ```
+  </Step>
+  <Step title="Ative a plataforma">
+    Acesse o seu domínio. A tela pede **e-mail**, **senha** e a **chave de
+    licença** que veio com a sua licença.
+
+    Essa primeira conta é a de Proprietário, e o nome da plataforma vem do
+    arquivo de licença — você pode trocá-lo no onboarding, logo em seguida.
+
+    Depois dela a ativação fecha. Todo mundo que entrar daqui em diante entra
+    por convite seu.
+  </Step>
+</Steps>
+
+<Tip>
+  Guarde a saída do `doctor` da instalação bem-sucedida. Comparar com ela é a
+  forma mais rápida de diagnosticar um problema meses depois.
+</Tip>
+
+## Depois de instalar
+
+- Siga o [início rápido](/produto/inicio-rapido) — daqui em diante o produto é o mesmo.
+- Configure [backup](/paas/backup-e-restauracao) **antes** de cadastrar gente de verdade.

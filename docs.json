@@ -16,11 +16,19 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view"]
+    "options": [
+      "copy",
+      "view"
+    ]
   },
   "navigation": {
     "global": {
       "anchors": [
+        {
+          "anchor": "Início",
+          "icon": "house",
+          "href": "/"
+        },
         {
           "anchor": "Site",
           "icon": "log-in",
@@ -32,167 +40,149 @@
         }
       ]
     },
-    "directory": "card",
-    "groups": [
+    "tabs": [
       {
-        "group": "Comece aqui",
-        "icon": "rocket",
-        "expanded": true,
-        "pages": [
-          "comece-aqui/o-que-e-didaska",
-          "comece-aqui/primeiros-passos",
-          "comece-aqui/conceitos",
-          "comece-aqui/papeis-e-permissoes",
-          "comece-aqui/planos"
-        ]
-      },
-      {
-        "group": "Cursos e conteúdo",
-        "icon": "book-open",
-        "expanded": true,
-        "pages": [
-          "cursos/visao-geral",
-          "cursos/criar-curso",
-          "cursos/modulos-e-aulas",
-          "cursos/editor-de-aulas",
-          "cursos/videos",
-          "cursos/aulas-ao-vivo",
-          "cursos/quizzes",
-          "cursos/progresso"
-        ]
-      },
-      {
-        "group": "Simulados e avaliações",
-        "icon": "clipboard-check",
-        "expanded": true,
-        "pages": [
-          "simulados/visao-geral",
-          "simulados/criar-simulado",
-          "simulados/banco-de-questoes",
-          "simulados/correcao-e-resultados",
-          "simulados/fazer-simulado"
-        ]
-      },
-      {
-        "group": "Certificados",
-        "icon": "award",
-        "tag": "Em breve",
-        "expanded": true,
-        "pages": [
-          "certificados/visao-geral",
-          "certificados/modelos",
-          "certificados/emissao-e-validacao"
-        ]
-      },
-      {
-        "group": "Engajamento",
-        "icon": "flame",
-        "tag": "Em breve",
-        "expanded": true,
-        "pages": [
-          "engajamento/gamificacao",
-          "engajamento/ranking",
-          "engajamento/comunidade",
-          "engajamento/notificacoes"
-        ]
-      },
-      {
-        "group": "Didaska AI",
-        "icon": "sparkles",
-        "expanded": true,
-        "pages": [
-          "didaska-ai/visao-geral",
-          "didaska-ai/assistente-de-estudos",
-          "didaska-ai/plano-de-estudos-e-flashcards",
-          "didaska-ai/creditos-de-ia"
-        ]
-      },
-      {
-        "group": "Monitoria",
-        "icon": "calendar-clock",
-        "tag": "Em breve",
-        "expanded": true,
-        "pages": [
-          "monitoria/visao-geral",
-          "monitoria/configurar-disponibilidade",
-          "monitoria/agendar-sessao"
-        ]
-      },
-      {
-        "group": "Pessoas e turmas",
-        "icon": "users",
-        "expanded": true,
-        "pages": [
-          "pessoas/membros",
-          "pessoas/turmas",
-          "pessoas/lista-de-presenca",
-          "pessoas/convites",
-          "pessoas/documentos"
-        ]
-      },
-      {
-        "group": "Configurações da plataforma",
-        "icon": "settings",
-        "expanded": true,
-        "pages": [
-          "configuracoes/aparencia-e-marca",
-          "configuracoes/dominio-personalizado",
-          "configuracoes/modelos-de-email",
-          "configuracoes/seguranca-e-sessoes",
-          "configuracoes/site-builder",
-          "configuracoes/faturamento",
-          "configuracoes/funcionalidades"
-        ]
-      },
-      {
-        "group": "Integrações",
-        "icon": "plug",
-        "expanded": true,
-        "pages": [
-          "integracoes/visao-geral",
+        "tab": "Guia do produto",
+        "groups": [
           {
-            "group": "Streaming",
-            "icon": "play",
+            "group": "Comece aqui",
+            "icon": "compass",
+            "expanded": true,
             "pages": [
-              "integracoes/youtube",
-              "integracoes/panda-video",
-              "integracoes/vimeo"
+              "produto/inicio-rapido",
+              "produto/conceitos",
+              "produto/edicoes"
             ]
           },
           {
-            "group": "Gateway de pagamentos",
-            "icon": "credit-card",
+            "group": "Cursos e conteúdo",
+            "icon": "book-open",
+            "expanded": true,
             "pages": [
-              "integracoes/stripe",
-              "integracoes/abacatepay"
+              "produto/cursos/criar-curso",
+              "produto/cursos/estruturar-conteudo",
+              "produto/cursos/publicar",
+              "produto/cursos/vitrine"
             ]
           },
           {
-            "group": "Comunicação",
+            "group": "Pessoas",
+            "icon": "users",
+            "pages": [
+              "produto/pessoas/sessao-unica",
+              "produto/pessoas/verificacao-em-duas-etapas",
+              "produto/pessoas/convidar-membros",
+              "produto/pessoas/papeis-e-permissoes",
+              "produto/pessoas/trocar-senha",
+              "produto/pessoas/turmas",
+              "produto/pessoas/prazo-da-matricula",
+              "produto/pessoas/avisos-por-email"
+            ]
+          },
+          {
+            "group": "Documentos",
+            "icon": "file-signature",
+            "pages": [
+              "produto/documentos/documentos-para-dar-ciencia"
+            ]
+          },
+          {
+            "group": "Avaliação",
+            "icon": "clipboard-check",
+            "pages": [
+              "produto/avaliacao/banco-de-questoes",
+              "produto/avaliacao/simulados",
+              "produto/avaliacao/redacoes",
+              "produto/avaliacao/certificados"
+            ]
+          },
+          {
+            "group": "Vídeos",
+            "icon": "clapperboard",
+            "pages": [
+              "produto/videos/importar-do-google-drive",
+              "produto/videos/dados-do-google-drive"
+            ]
+          },
+          {
+            "group": "Monitoria",
+            "icon": "video",
+            "pages": [
+              "produto/monitoria/sala-da-monitoria",
+              "produto/monitoria/avaliacao-da-monitoria",
+              "produto/monitoria/relatorios-da-monitoria",
+              "produto/monitoria/creditos-de-monitoria"
+            ]
+          },
+          {
+            "group": "Agenda",
             "icon": "calendar",
             "pages": [
-              "integracoes/google-meet",
-              "integracoes/google-calendar"
+              "produto/agenda/google-agenda",
+              "produto/agenda/plano-de-estudos"
             ]
           },
           {
-            "group": "Produtividade",
-            "icon": "notebook-pen",
+            "group": "Marketplace",
+            "icon": "store",
             "pages": [
-              "integracoes/notion"
+              "produto/marketplace/vender-no-marketplace",
+              "produto/marketplace/clube-de-assinatura",
+              "produto/marketplace/financeiro"
+            ]
+          },
+          {
+            "group": "Didaska AI",
+            "icon": "sparkles",
+            "pages": [
+              "produto/ia/visao-geral",
+              "produto/ia/creditos-e-limites"
             ]
           }
         ]
       },
       {
-        "group": "Guia do aluno",
-        "icon": "graduation-cap",
-        "expanded": true,
-        "pages": [
-          "aluno/primeiro-acesso",
-          "aluno/navegar-nos-cursos",
-          "aluno/acompanhar-progresso",
-          "aluno/perfil-e-preferencias"
+        "tab": "Didaska SaaS",
+        "groups": [
+          {
+            "group": "Sua plataforma na nuvem",
+            "icon": "cloud",
+            "expanded": true,
+            "pages": [
+              "saas/primeiros-passos",
+              "saas/endereco-da-plataforma",
+              "saas/planos-e-cobranca",
+              "saas/dominio-personalizado",
+              "saas/limites",
+              "saas/suporte",
+              "saas/exclusao-da-plataforma"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Didaska PaaS",
+        "groups": [
+          {
+            "group": "Instalação",
+            "icon": "server",
+            "expanded": true,
+            "pages": [
+              "paas/requisitos",
+              "paas/instalacao",
+              "paas/licenca"
+            ]
+          },
+          {
+            "group": "Operação",
+            "icon": "wrench",
+            "expanded": true,
+            "pages": [
+              "paas/atualizacao",
+              "paas/backup-e-restauracao",
+              "paas/diferencas"
+            ]
+          }
         ]
       }
     ]
@@ -214,8 +204,14 @@
       {
         "header": "Didaska",
         "items": [
-          { "label": "Site oficial", "href": "https://didaska.com.br" },
-          { "label": "Fale com o nosso time", "href": "https://didaska.com.br/contato" }
+          {
+            "label": "Site oficial",
+            "href": "https://didaska.com.br"
+          },
+          {
+            "label": "Fale com o nosso time",
+            "href": "https://didaska.com.br/contato"
+          }
         ]
       }
     ]

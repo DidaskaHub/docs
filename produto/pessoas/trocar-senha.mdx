@@ -1,0 +1,41 @@
+---
+title: Trocar a senha
+description: Altere sua senha pelo perfil, confirmando com um código enviado ao seu e-mail.
+---
+
+A senha se troca em **Perfil → Segurança**, na própria página. Para ninguém
+trocar a sua senha só porque encontrou a sua conta aberta num computador, a
+troca pede duas provas: a senha atual e um código enviado ao seu e-mail.
+
+<Steps>
+  <Step title="Preencha as senhas">
+    Digite a senha atual, a nova senha (no mínimo 12 caracteres) e repita a
+    nova para confirmar.
+  </Step>
+  <Step title="Peça o código">
+    Um código de 6 dígitos chega ao e-mail cadastrado na sua conta. Ele vale
+    por 15 minutos.
+  </Step>
+  <Step title="Confirme">
+    Digite o código. A senha muda na hora, e qualquer outra sessão aberta com a
+    sua conta é encerrada.
+  </Step>
+</Steps>
+
+## Se algo der errado
+
+- **Código incorreto ou senha atual incorreta**: você tem 5 tentativas por
+  código. Depois disso, peça um código novo.
+- **Código vencido**: peça outro. Pedir um código novo invalida o anterior.
+- **O e-mail não chegou**: confira a caixa de spam e use "Reenviar código".
+
+<Tip>
+  Esqueceu a senha atual? Saia da conta e use **Esqueceu sua senha?** na tela
+  de login: o código chega ao seu e-mail do mesmo jeito.
+</Tip>
+
+## Para quem administra
+
+O texto do e-mail com o código é personalizável em **Configurações → Templates
+de Email**, no template **Código para alterar a senha**. O código em si
+(`{{ codigo }}`) é obrigatório no texto.

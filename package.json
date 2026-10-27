@@ -1,0 +1,13 @@
+{
+  "name": "didaska-public-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "mint dev",
+    "broken-links": "mint broken-links",
+    "update": "mint update"
+  },
+  "devDependencies": {
+    "mint": "^4.2.849"
+  }
+}
