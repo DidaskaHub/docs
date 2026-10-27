@@ -1,0 +1,85 @@
+---
+title: Planos e cobrança
+description: Como funciona a assinatura, a página de Faturamento, o pagamento em atraso e o cancelamento.
+---
+
+import ApenasSaas from '/snippets/apenas-saas.mdx';
+
+<ApenasSaas />
+
+A assinatura é da plataforma, não por usuário administrador. O que varia entre
+planos é o volume de alunos ativos, os créditos de IA e os recursos adicionais
+disponíveis. A mensalidade é cobrada todo mês no cartão de crédito cadastrado.
+
+Se a sua escola tem um acordo direto com a Didaska, a página de Faturamento
+mostra **Acordo direto com a Didaska**: a plataforma é cobrada como combinado
+com a Didaska, sem cartão. Os itens à parte continuam à venda, fora do acordo —
+veja [Itens à parte no acordo direto](#itens-a-parte-no-acordo-direto).
+
+## Primeiro pagamento
+
+Ao contratar, você recebe da Didaska um **link de pagamento**. A plataforma é
+liberada assim que o primeiro pagamento é aprovado: nesse momento chega um
+e-mail para você definir a sua senha de Proprietário. O link vale por cerca de
+um dia; se ele vencer, peça outro ao suporte da Didaska.
+
+## A página de Faturamento
+
+Em **Gerenciar → Faturamento**, só o Proprietário vê:
+
+- **Assinatura**: situação, ciclo, data da próxima cobrança e valor.
+- **Composição da cobrança**: os itens da próxima fatura.
+- **Forma de pagamento**: a bandeira e os quatro últimos dígitos do cartão.
+  **Trocar cartão** abre o formulário seguro do provedor de pagamento dentro da
+  própria página — os dados do cartão não passam pelos servidores da Didaska.
+- **Faturas**: situação, valor, data e o PDF de cada uma. Nas faturas em aberto,
+  **Pagar agora** cobra na hora o cartão cadastrado.
+
+## Pagamento em atraso
+
+Se a cobrança não for aprovada, você recebe um e-mail e tentamos cobrar de novo
+**uma vez por dia**, com um aviso a cada tentativa.
+
+- **Mais de 3 dias de atraso**: a plataforma é **suspensa**. Professores e
+  alunos veem, ao entrar, "Essa plataforma está suspensa. Entre em contato com o
+  suporte da Didaska". Você, como Proprietário, continua entrando, apenas na
+  página de Faturamento, para regularizar.
+- **Pagou**: a suspensão é levantada na hora, para todos.
+- **10 dias sem pagamento**: a assinatura é cancelada.
+
+## Itens à parte no acordo direto
+
+Na escola de acordo direto, a aba **Upgrade** do Faturamento vende os mesmos
+itens das outras escolas, cobrados à parte do acordo e pelos mesmos valores:
+
+- **Créditos da Didaska AI**: compra avulsa, por Pix ou cartão, sem vencimento.
+- **Pacotes de armazenamento de vídeo**: mensais, no cartão. O primeiro pacote
+  cobra o mês cheio na hora; os seguintes cobram só o proporcional até a
+  próxima mensalidade dos pacotes.
+
+O cartão é cadastrado em **Forma de pagamento**, como nas outras escolas, e as
+faturas dos itens aparecem em **Faturas**. Remover um pacote vale no fim do
+ciclo já pago, sem reembolso.
+
+Se a mensalidade dos pacotes não for aprovada, novas compras ficam bloqueadas e
+tentamos cobrar de novo uma vez por dia. Você pode pagar na hora em
+**Faturas → Pagar agora** ou trocar o cartão. Depois de **3 dias** sem
+pagamento, os pacotes são encerrados e o espaço deles sai da sua cota: os
+vídeos que já existem continuam tocando, mas novos envios param até liberar
+espaço. A plataforma em si **não** é suspensa por isso.
+
+## Cancelar a assinatura
+
+Em **Faturamento → Cancelar assinatura**, o cancelamento vale **no fim do ciclo
+já pago** — até lá tudo funciona normalmente, e dá para desfazer.
+
+Depois que a assinatura termina (pelo cancelamento ou pelos 10 dias de atraso),
+a plataforma fica suspensa por **30 dias**, e nesse período você pode
+**reativá-la pagando** pela página de Faturamento.
+
+<Warning>
+  Passados os 30 dias sem reativação, a plataforma e todos os seus dados são
+  excluídos definitivamente. Você recebe avisos por e-mail 7 dias e 1 dia antes
+  da data — exporte o que precisar antes. Veja
+  [Exclusão da plataforma](/saas/exclusao-da-plataforma).
+</Warning>

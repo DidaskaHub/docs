@@ -1,38 +1,142 @@
-# Instruções do projeto de documentação
+# Documentação pública da Didaska
 
-## Sobre este projeto
+Este repositório é a **única documentação pública da Didaska**, publicada em
+[docs.didaska.com.br](https://docs.didaska.com.br) pelo Mintlify a partir da
+branch `main`.
 
-- Documentação **oficial da Didaska** para usuários da plataforma (donos de escola, administradores, professores e alunos).
-- Site construído com [Mintlify](https://mintlify.com). Páginas são arquivos MDX com frontmatter YAML; a configuração fica em `docs.json`.
-- `mint dev` roda o preview local; `mint broken-links` valida links internos.
+## Fluxo de trabalho
 
-## Público e propósito
+- Todo trabalho nasce de uma issue **DK-XXXX** no Linear. A branch tem o nome da
+  issue (`DK-XXXX`) e o título e a descrição do PR a referenciam.
+- PR sempre para `develop`. Nunca abra PR direto para `main`.
+- `develop → main` **publica em produção**. Esse PR acompanha a release do
+  produto: a documentação de um recurso só vai para `main` quando o recurso está
+  em produção.
+- Nada de push em `main` nem force push.
 
-- O leitor **não é técnico**. É educador, gestor ou aluno.
-- Esta é uma documentação **de produto** (Product Guide): explica o que a plataforma faz e como configurar — não como ela foi construída.
+Site de documentação para **quem usa** a plataforma — administradores,
+professores e alunos das instituições. Construído em [Mintlify](https://mintlify.com).
 
-## Limites de conteúdo (obrigatório)
+Isto **não** é documentação interna. Decisão de arquitetura, convenção de código
+e o que um módulo faz por dentro moram nos repositórios do produto. Aqui só
+entra o que o cliente precisa saber para usar o produto.
 
-- **Nunca** inclua rotas de API, nomes de tabela, stack, código, nomes internos de feature flags (`addon_*`, `DK-*`), detalhes de banco, infraestrutura ou implementação.
-- Não documente o painel interno da equipe Didaska nem ferramentas internas.
-- Descreva a navegação pelo que o usuário vê na tela (menus, botões, abas) — nunca por URL/rota.
-- Recursos que dependem do plano ou de uma funcionalidade ativada devem ter um aviso (`<Note>`) deixando isso claro, sem citar o identificador técnico.
+O leitor **não é técnico**: é educador, gestor ou aluno. Esta é uma documentação
+de produto — explica o que a plataforma faz e como configurar, não como ela foi
+construída.
 
-## Terminologia (use sempre assim)
+## Como mexer
 
-- A plataforma: **a Didaska** / **a plataforma**.
-- Pessoas: **alunos**, **professores**, **administradores**, **proprietário** (não "usuários" genérico quando der para ser específico).
-- Áreas: **Cursos**, **Aulas**, **Módulos**, **Simulados**, **Banco de Questões**, **Turmas**, **Lista de Presença**, **Comunidade**, **Didaska AI**, **Monitoria**, **Certificados**, **Site Builder**, **Integrações**, **Aparência**, **Faturamento**, **Funcionalidades**.
-- "Sua escola" / "sua plataforma" ao falar com o dono; "seus alunos"; "seu conteúdo".
+```bash
+bun install
+bun run dev            # sobe em http://localhost:3000
+bun run broken-links   # procura link quebrado
+```
 
-## Estilo de escrita
+O `package.json` só fixa a versão do `mint`. O Mintlify ignora `node_modules/`
+na publicação.
 
-- Português do Brasil, **com toda a acentuação correta**.
-- Voz ativa e segunda pessoa ("você").
-- Frases curtas — uma ideia por frase.
-- Títulos em caixa de frase (só a primeira letra maiúscula).
-- **Negrito** para elementos da interface: clique em **Configurações**.
-- Tom: claro, direto e acolhedor. Confiança sem jargão.
+Página é MDX com frontmatter YAML. A navegação vive em `docs.json` — **página
+que não está no `docs.json` não aparece no site**, e página listada que não
+existe quebra o build.
+
+## Regra de atualização
+
+**Mudança de comportamento visível ao usuário atualiza a documentação no mesmo
+PR.** Vale para: recurso novo, fluxo alterado, campo renomeado, limite mudado,
+recurso removido.
+
+Se a mudança não é visível ao usuário, não escreva nada aqui. Documentação
+inflada com detalhe interno é tão ruim quanto documentação desatualizada — e as
+duas fazem as pessoas pararem de ler.
+
+## As duas edições
+
+O produto tem duas edições, e o conteúdo é dividido assim:
+
+| Aba | O que vai nela |
+|---|---|
+| **Guia do produto** | Tudo que vale para as duas. É a maior parte |
+| **Didaska SaaS** | Só o que existe na edição hospedada: assinatura, domínio pela interface, limites de plano |
+| **Didaska PaaS** | Só o que existe na instalação própria: requisitos, instalação, licença, atualização, backup |
+
+**Não duplique conteúdo entre as abas.** Se algo vale para as duas edições, ele
+mora no guia do produto — mesmo que uma edição tenha uma nuance. A nuance vira um
+aviso na página compartilhada:
+
+```mdx
+import ApenasSaas from '/snippets/apenas-saas.mdx';
+
+<ApenasSaas />
+```
+
+Os dois avisos disponíveis são `apenas-saas.mdx` e `apenas-paas.mdx`, em
+`snippets/`. Use-os no topo da página, quando ela inteira é de uma edição só, ou
+inline, quando só uma seção é.
+
+Duplicar a mesma explicação em duas abas é o caminho garantido para elas
+divergirem — e aí o cliente lê a errada.
+
+## Como escrever
+
+- **Segunda pessoa e voz ativa.** "Você cria o curso", não "o curso é criado".
+- **Uma ideia por frase.** Frase longa em documentação é releitura.
+- **Título em caixa de sentença.** "Criar um curso", não "Criar Um Curso".
+- **Negrito para elemento de interface:** clique em **Configurações**.
+- **Código para nome de arquivo, comando e caminho:** `docker compose up -d`.
+- **Diga o que acontece depois.** Toda página termina apontando o próximo passo
+  ou o assunto vizinho.
+- **Nunca prometa o que o produto não faz.** Documentação é contrato.
+
+Escreva em **português do Brasil**, do jeito que a interface fala. Se a tela diz
+"Usuários", a documentação diz Usuários — não "membros", não "pessoas".
+
+## Vocabulário
+
+Use o termo que a interface usa. Quando houver conflito, a interface ganha e a
+documentação é corrigida.
+
+| Use | Não use |
+|---|---|
+| plataforma | tenant, workspace, instância |
+| curso, módulo, aula | trilha, capítulo, lição |
+| prova | simulado, exame, avaliação (quando for a prova formal) |
+| turma | classe, grupo, cohort |
+| matrícula | inscrição, enrollment |
+| Didaska SaaS · Didaska PaaS | cloud, self-hosted, on-premise |
+
+Termo do produto em português. Nada de vocabulário de engenharia vazando para
+cá: o cliente não sabe o que é tenant, outbox ou fila.
+
+## Limites do conteúdo
+
+Não documente:
+
+- detalhe de implementação, arquitetura ou stack;
+- rota interna, nome de tabela, nome de serviço;
+- recurso ainda não lançado — inclusive "em breve";
+- endereço interno, valor de configuração de produção, nome de servidor;
+- nome interno de feature flag ou de issue (`addon_*`, `DK-*`);
+- painel interno da equipe Didaska ou ferramenta interna;
+- passo que só a equipe da Didaska executa.
+
+Documente:
+
+- o que o cliente vê, faz e configura;
+- o que acontece quando algo dá errado, e o que ele pode fazer;
+- limite, prazo e regra que afetam a decisão dele;
+- o que muda entre as edições.
+
+## Detalhes de escrita
+
+- Português do Brasil **com toda a acentuação correta**.
+- Tom claro, direto e acolhedor. Confiança sem jargão.
+- Descreva a navegação pelo que a pessoa vê na tela (menus, botões, abas) —
+  nunca por URL ou rota.
+- Recurso que depende do plano ou de uma funcionalidade ativada leva um aviso
+  (`<Note>`) deixando isso claro, sem citar o identificador técnico.
+- Toda página começa com frontmatter `title` + `description`.
+- Links internos sem `.mdx` (ex.: `/produto/cursos/criar-curso`).
 
 ## Componentes Mintlify mais usados
 
@@ -40,6 +144,26 @@
 - Avisos: `<Note>`, `<Tip>`, `<Warning>`, `<Info>`, `<Check>`.
 - `<CardGroup cols={2}>` / `<Card title="..." icon="lucide-icon" href="/rota">`.
 - `<Tabs>` / `<Tab title="...">` e `<AccordionGroup>` / `<Accordion title="...">`.
-- Ícones: biblioteca **lucide**.
-- Links internos sem `.mdx` (ex.: `/cursos/visao-geral`).
-- Toda página começa com frontmatter `title` + `description`.
+- Ícones: biblioteca **lucide**. Nunca emoji.
+
+## Identidade visual
+
+Tema, cores, logo (`logo/`), favicon e rodapé ficam em `docs.json` e
+`style.css`. Mudança de navegação mexe só em `navigation`; o resto é
+identidade e não muda junto com conteúdo.
+
+## Screenshot
+
+Imagem envelhece mais rápido que texto e é o que mais desatualiza um site de
+documentação. Use só quando a tela é realmente difícil de descrever.
+
+Quando usar: sem dado real, sem nome de pessoa, sem e-mail. Versão clara e
+escura quando o contraste importar.
+
+## Antes de abrir PR
+
+```bash
+bun run broken-links
+```
+
+E leia a página no navegador. Erro de MDX aparece renderizado, não no lint.

@@ -1,0 +1,59 @@
+---
+title: Domínio personalizado
+description: Use um endereço da sua instituição no lugar do endereço da Didaska.
+---
+
+import ApenasSaas from '/snippets/apenas-saas.mdx';
+
+<ApenasSaas />
+
+Sua plataforma nasce num endereço da Didaska. Você pode usar também um endereço
+seu, como `aluno.suainstituicao.com.br`. Só a proprietária e quem administra
+a plataforma veem esta opção.
+
+<Steps>
+  <Step title="Informe o domínio">
+    Em **Configurações → Geral → Domínio próprio** (ou no passo de domínio do
+    primeiro acesso), informe o endereço que você quer usar. Use um
+    **subdomínio** — `aluno.suainstituicao.com.br`, e não
+    `suainstituicao.com.br`: o domínio principal não aceita o apontamento.
+  </Step>
+  <Step title="Crie o registro CNAME">
+    A tela mostra o registro exato a criar no painel de DNS de onde você
+    comprou o domínio (Registro.br, GoDaddy, Hostinger, Cloudflare…). Copie o
+    nome e o destino como estão.
+  </Step>
+  <Step title="Aguarde a verificação">
+    A plataforma confere sozinha a cada poucos minutos e emite o certificado de
+    segurança (HTTPS). Costuma levar minutos; a propagação do DNS pode levar
+    algumas horas. Para conferir na hora, use **Verificar agora**.
+  </Step>
+</Steps>
+
+## O que cada estado quer dizer
+
+| Estado | O que fazer |
+|---|---|
+| **Aguardando o CNAME** | Crie o registro no seu DNS, como a tela mostra. |
+| **Verificando** | Nada: o apontamento foi encontrado e o certificado está sendo emitido. |
+| **Ativo** | Pronto. A plataforma já abre no seu domínio, com HTTPS. |
+| **Precisa de atenção** | Confira o registro no DNS e clique em **Verificar agora**. Se continuar, fale com o suporte. |
+
+## Depois de ativo
+
+- O endereço da Didaska continua funcionando ao lado do seu.
+- O certificado renova automaticamente.
+- Tudo funciona pelo seu domínio: login, aulas, arquivos, pagamentos, Google
+  Agenda e Google Drive. A exceção é **conectar integrações** em
+  Gerenciar → Integrações (Stripe, Vimeo, YouTube, AbacatePay…): faça isso
+  pelo endereço da Didaska da plataforma — a tela mostra o link.
+- Escolher vídeos do Google Drive para importar também é pelo endereço da
+  Didaska; conectar o Drive funciona nos dois.
+- Um domínio só pode estar em uma plataforma. Para trocar, informe o novo; o
+  antigo deixa de responder pela plataforma.
+
+<Warning>
+  Não aponte o domínio para outro serviço enquanto ele estiver ativo aqui. A
+  verificação falha e a plataforma fica inacessível nesse endereço até o DNS
+  voltar.
+</Warning>

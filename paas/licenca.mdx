@@ -1,0 +1,51 @@
+---
+title: Licença
+description: O que a licença cobre, o que acontece ao vencer e como renovar.
+---
+
+import ApenasPaas from '/snippets/apenas-paas.mdx';
+
+<ApenasPaas />
+
+## A chave de ativação
+
+Junto com o arquivo de licença vem uma **chave** no formato
+`DIDASKA-0000-0000-0000-0000`. Ela é pedida uma única vez, na primeira tela da
+instalação, para criar a conta de Proprietário — é ela que liga a pessoa à
+licença.
+
+Guarde a chave: se a instalação for refeita do zero, ela é pedida de novo.
+
+## O que a licença dá
+
+A licença dá o **direito de uso da plataforma** e o **acesso às atualizações**
+durante o período contratado, para **uma plataforma**.
+
+Ela habilita a instalação, e é dela que a plataforma tira a própria identidade.
+Por isso a instalação não sobe sem o arquivo de licença.
+
+## Ao vencer
+
+O comportamento é deliberadamente suave:
+
+- **a sua plataforma continua funcionando**, na versão que você já tem;
+- você deixa de baixar versões novas do registry;
+- a interface administrativa avisa que a licença expirou.
+
+Nada é bloqueado, nenhum dado é afetado, nenhum aluno perde acesso. Renovando,
+o acesso às atualizações volta imediatamente.
+
+## Uma plataforma por licença
+
+A licença cobre uma plataforma e uma instalação. Ambientes de homologação são
+permitidos e não consomem licença adicional — avise a gente para emitirmos o
+certificado próprio deles.
+
+## Renovação
+
+A renovação atualiza o arquivo de licença. Substitua o arquivo e reinicie a
+aplicação; nada mais muda.
+
+```bash
+docker compose restart app
+```

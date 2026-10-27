@@ -1,0 +1,108 @@
+---
+title: Clube de assinatura
+description: Uma seleção de cursos e arquivos por assinatura mensal ou anual, no cartão (renovação automática) e no Pix (renovação manual), com teste grátis, cancelamento e os assinantes de cada Clube.
+---
+
+O **Clube** é um produto do [Marketplace](/produto/marketplace/vender-no-marketplace)
+que libera, por assinatura, uma **seleção de cursos e arquivos** escolhida por
+você. A escola pode ter quantos Clubes quiser.
+
+## Criar um Clube
+
+Em **Gerenciar → Marketplace → Produtos**, crie um produto do tipo **Clube**:
+
+- **Itens:** os cursos e os arquivos que o Clube libera.
+- **Incluir automaticamente os cursos novos:** ligada, todo curso publicado
+  **pela primeira vez** daqui em diante entra no Clube sozinho — e quem já
+  assina ganha o acesso na hora. Se você tirar um curso do Clube, publicá-lo
+  de novo depois não o devolve.
+- **Recorrência:** mensal ou anual (obrigatória).
+- **Formas de pagamento:** cartão e/ou Pix.
+- **Preço do Pix** (opcional): um preço próprio para o período pago no Pix.
+  Vazio, vale o mesmo do cartão.
+- **Teste grátis** (opcional): quantos dias, só no cartão. Vazio ou 0, sem
+  teste.
+
+Mudou os itens de um Clube publicado? Quem assina ganha o que entrou e perde
+o que saiu, na hora. Arquivar o Clube tira ele da vitrine, mas não cancela as
+assinaturas de quem já assina.
+
+## O que o assinante recebe
+
+Enquanto a assinatura vale — no teste grátis, em dia ou na carência —, a
+pessoa estuda os cursos do Clube (eles aparecem em **Meus cursos**) e baixa os
+arquivos em **Minhas compras**. Na página de um curso que está num Clube, a
+vitrine mostra **"Incluído no Clube X"**.
+
+Quando a assinatura acaba, o acesso aos cursos do Clube sai, mas **nada se
+perde**: o progresso, as anotações, as notas e os certificados emitidos
+ficam. Assinando de novo, a pessoa volta de onde parou.
+
+<Note>
+Quem comprou um curso **avulso** continua com ele mesmo depois que o Clube
+acaba: o acesso é a soma das duas compras.
+</Note>
+
+## No cartão: renovação automática
+
+A assinatura no cartão renova sozinha pelo Stripe. Na vitrine, quem assina
+pode usar o **cartão salvo** (um clique) ou cadastrar um cartão na página
+segura do Stripe. Cupons valem como nas outras assinaturas: só na primeira
+cobrança, nos primeiros meses ou em todas.
+
+**Teste grátis:** o cartão é cadastrado no começo e a primeira cobrança
+acontece no fim do teste, se a pessoa não cancelar. É **um teste por pessoa
+por Clube**: quem já assinou ou já testou aquele Clube assina sem teste. O
+cupom de "só a primeira cobrança" não se soma ao teste.
+
+**Se a renovação falhar,** começam **7 dias de carência** com o acesso
+liberado: a pessoa recebe um aviso (no sino e por e-mail) com o link para
+atualizar o cartão em **Perfil → Pagamentos**. Atualizou e a cobrança passou,
+volta ao normal. Passados os 7 dias sem pagamento, o acesso é suspenso e a
+assinatura é cancelada no Stripe.
+
+## No Pix: renovação manual
+
+No Pix a pessoa paga **um período por vez** (um mês ou um ano), com o QR Code
+na própria página. O período começa no pagamento.
+
+- **7, 3 e 1 dia antes de vencer**, ela recebe um aviso no sino e por e-mail
+  com o botão **Gerar o Pix da renovação**.
+- **Venceu sem pagar:** **7 dias de carência** com o acesso liberado, com
+  novos avisos. Pagando dentro da carência, o novo período **começa na data
+  em que o anterior venceu** — ninguém ganha nem perde dias.
+- **Passada a carência sem pagamento,** o acesso é suspenso.
+
+Quem assina no Pix pode **trocar para o cartão** sem perder o tempo pago: a
+primeira cobrança no cartão acontece quando o período do Pix vence. A troca
+precisa ser feita com pelo menos 2 dias de antecedência do vencimento.
+
+## Cancelar
+
+Em **Minhas compras** (ou **Perfil → Pagamentos**), a pessoa vê cada
+assinatura com o status, a próxima cobrança (ou o vencimento, no Pix) e a
+forma de pagamento. **Cancelar** mantém o acesso até o fim do período pago e
+pode ser **desfeito** antes dessa data. No Pix, cancelar é **não renovar**: o
+acesso vai até o vencimento e os avisos param. Na carência, cancelar encerra
+na hora.
+
+## Os e-mails
+
+Três e-mails novos, editáveis em **Templates de e-mail**:
+
+| Template | Quando sai |
+| --- | --- |
+| **Clube — renovação no Pix** | 7, 3 e 1 dia antes do vencimento do Pix, quando ele vence e perto do fim da carência |
+| **Clube — a cobrança do cartão falhou** | Quando a renovação no cartão não passa e perto do fim da carência |
+| **Clube — acesso suspenso** | Quando a carência acaba sem pagamento |
+
+São avisos de cobrança e de acesso: saem mesmo para quem desligou as
+comunicações por e-mail.
+
+## Os assinantes
+
+Em cada Clube, a gestão vê os **assinantes**: o status (no teste, ativa, na
+carência, cancelando ou encerrada), a forma de pagamento, a próxima cobrança
+ou o vencimento e desde quando assina — com filtro por status e
+**exportação em CSV**. O [Financeiro](/produto/marketplace/financeiro) mostra
+o MRR, o churn e a quebra por Clube.
