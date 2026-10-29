@@ -149,6 +149,7 @@
             "icon": "cloud",
             "expanded": true,
             "pages": [
+              "saas/assinar-a-didaska",
               "saas/primeiros-passos",
               "saas/endereco-da-plataforma",
               "saas/planos-e-cobranca",
