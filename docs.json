@@ -100,6 +100,7 @@
             "group": "Vídeos",
             "icon": "clapperboard",
             "pages": [
+              "produto/videos/acompanhar-os-envios",
               "produto/videos/importar-do-google-drive",
               "produto/videos/dados-do-google-drive"
             ]
