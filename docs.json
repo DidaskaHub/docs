@@ -50,8 +50,22 @@
             "expanded": true,
             "pages": [
               "produto/inicio-rapido",
-              "produto/conceitos",
-              "produto/edicoes"
+              "produto/conceitos"
+            ]
+          },
+          {
+            "group": "Sua plataforma",
+            "icon": "cloud",
+            "expanded": true,
+            "pages": [
+              "saas/assinar-a-didaska",
+              "saas/primeiros-passos",
+              "saas/endereco-da-plataforma",
+              "saas/planos-e-cobranca",
+              "saas/dominio-personalizado",
+              "saas/limites",
+              "saas/suporte",
+              "saas/exclusao-da-plataforma"
             ]
           },
           {
@@ -142,51 +156,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "Didaska SaaS",
-        "groups": [
-          {
-            "group": "Sua plataforma na nuvem",
-            "icon": "cloud",
-            "expanded": true,
-            "pages": [
-              "saas/assinar-a-didaska",
-              "saas/primeiros-passos",
-              "saas/endereco-da-plataforma",
-              "saas/planos-e-cobranca",
-              "saas/dominio-personalizado",
-              "saas/limites",
-              "saas/suporte",
-              "saas/exclusao-da-plataforma"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Didaska PaaS",
-        "groups": [
-          {
-            "group": "Instalação",
-            "icon": "server",
-            "expanded": true,
-            "pages": [
-              "paas/requisitos",
-              "paas/instalacao",
-              "paas/licenca"
-            ]
-          },
-          {
-            "group": "Operação",
-            "icon": "wrench",
-            "expanded": true,
-            "pages": [
-              "paas/atualizacao",
-              "paas/backup-e-restauracao",
-              "paas/diferencas"
-            ]
-          }
-        ]
       }
     ]
   },
@@ -218,5 +187,15 @@
         ]
       }
     ]
-  }
+  },
+  "redirects": [
+    {
+      "source": "/paas/:slug*",
+      "destination": "/saas/primeiros-passos"
+    },
+    {
+      "source": "/produto/edicoes",
+      "destination": "/produto/inicio-rapido"
+    }
+  ]
 }
