@@ -1,0 +1,59 @@
+---
+title: Matrícula por módulo
+description: Libere o curso todo ou só alguns módulos para cada aluno, e troque quando precisar.
+---
+
+Ao matricular um aluno, a escola escolhe o que ele estuda:
+
+- **Curso Todo** (padrão): todos os módulos, inclusive os que forem criados
+  depois.
+- **Módulos Específicos**: só os módulos marcados.
+
+O aluno com módulos específicos vê e acessa **apenas esses módulos** — as
+aulas, os materiais, as provas aplicadas nas aulas, a busca, a Didaska IA e o
+progresso consideram só o que foi liberado. Os outros módulos não aparecem para
+ele de forma nenhuma: nem na lista do curso, nem em contagens de aulas ou de
+módulos.
+
+## Onde escolher
+
+- **Turma do curso**: na página do curso, abra **Turma**, escolha a pessoa em
+  **Matricular alguém** e marque **Curso Todo** ou **Módulos Específicos**.
+- **Cadastro do membro**: em **Matrículas avulsas**, cada curso tem a opção
+  **Módulos**, com a mesma escolha.
+- **Importação por CSV**: ao matricular os importados em um curso, escolha
+  **Curso Todo** ou **Módulos Específicos** para todos. Para dar módulos
+  diferentes a cada pessoa, acrescente a coluna `modulos` ao arquivo, com os
+  nomes dos módulos separados por ponto e vírgula:
+
+  ```csv
+  nome,email,modulos
+  Maria Silva,maria@exemplo.com,Introdução;Revisão Final
+  João Souza,joao@exemplo.com,
+  ```
+
+  A linha com a coluna em branco segue a escolha geral. Um nome que não é
+  módulo do curso faz a linha ser recusada, com o motivo no resultado.
+
+## Trocar os módulos de quem já está matriculado
+
+Na **Turma** do curso, use **Módulos** na linha do aluno — ou, no formulário do
+membro, a opção **Módulos** da matrícula. O progresso já feito fica guardado:
+o módulo que sai deixa de contar, e volta a contar se for liberado de novo.
+
+<Note>
+  Módulos criados depois da matrícula **não entram** para quem tem módulos
+  específicos. Para liberá-los, inclua-os pela Turma ou pelo formulário do
+  membro.
+</Note>
+
+## Progresso e certificado
+
+- O progresso do aluno conta só as aulas dos módulos liberados.
+- O **certificado de conclusão do curso** é emitido apenas para quem tem o
+  **Curso Todo**.
+
+## Vendas
+
+A venda pelo Marketplace, o link de convite e as turmas continuam matriculando
+no **Curso Todo**.
