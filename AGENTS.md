@@ -50,32 +50,16 @@ Se a mudança não é visível ao usuário, não escreva nada aqui. Documentaç�
 inflada com detalhe interno é tão ruim quanto documentação desatualizada — e as
 duas fazem as pessoas pararem de ler.
 
-## As duas edições
+## Um produto só
 
-O produto tem duas edições, e o conteúdo é dividido assim:
+A Didaska é só a edição hospedada (a antiga separação SaaS/PaaS acabou em
+29/10/2026). O site tem uma aba, o **Guia do produto**. O grupo **Sua
+plataforma** (pasta `saas/`) reúne assinatura, endereço, domínio próprio,
+planos, limites, suporte e exclusão; o resto mora nos grupos de cada área.
 
-| Aba | O que vai nela |
-|---|---|
-| **Guia do produto** | Tudo que vale para as duas. É a maior parte |
-| **Didaska SaaS** | Só o que existe na edição hospedada: assinatura, domínio pela interface, limites de plano |
-| **Didaska PaaS** | Só o que existe na instalação própria: requisitos, instalação, licença, atualização, backup |
-
-**Não duplique conteúdo entre as abas.** Se algo vale para as duas edições, ele
-mora no guia do produto — mesmo que uma edição tenha uma nuance. A nuance vira um
-aviso na página compartilhada:
-
-```mdx
-import ApenasSaas from '/snippets/apenas-saas.mdx';
-
-<ApenasSaas />
-```
-
-Os dois avisos disponíveis são `apenas-saas.mdx` e `apenas-paas.mdx`, em
-`snippets/`. Use-os no topo da página, quando ela inteira é de uma edição só, ou
-inline, quando só uma seção é.
-
-Duplicar a mesma explicação em duas abas é o caminho garantido para elas
-divergirem — e aí o cliente lê a errada.
+Não escreva "Didaska SaaS", "Didaska PaaS", "edição" nem "instalação
+própria". Os endereços antigos (`/paas/*`, `/produto/edicoes`) têm
+redirecionamento em `docs.json`.
 
 ## Como escrever
 
@@ -103,7 +87,6 @@ documentação é corrigida.
 | prova | simulado, exame, avaliação (quando for a prova formal) |
 | turma | classe, grupo, cohort |
 | matrícula | inscrição, enrollment |
-| Didaska SaaS · Didaska PaaS | cloud, self-hosted, on-premise |
 
 Termo do produto em português. Nada de vocabulário de engenharia vazando para
 cá: o cliente não sabe o que é tenant, outbox ou fila.
@@ -125,7 +108,6 @@ Documente:
 - o que o cliente vê, faz e configura;
 - o que acontece quando algo dá errado, e o que ele pode fazer;
 - limite, prazo e regra que afetam a decisão dele;
-- o que muda entre as edições.
 
 ## Detalhes de escrita
 

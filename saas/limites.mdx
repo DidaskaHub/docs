@@ -3,20 +3,16 @@ title: Limites da plataforma
 description: Os limites que existem, por que existem e como acompanhá-los.
 ---
 
-import ApenasSaas from '/snippets/apenas-saas.mdx';
-
-<ApenasSaas />
-
 Limites existem para que o uso de uma instituição não afete as outras. Em
 operação normal você não esbarra neles.
 
 | Limite | Do que depende |
 |---|---|
-| Alunos ativos | Plano contratado |
+| Membros | Plano contratado |
 | Armazenamento | Plano contratado |
 | Créditos de IA | Plano, mais pacotes adicionais |
 | Tamanho de arquivo por envio | Igual em todos os planos |
-| Salas de aula ao vivo simultâneas | Plano contratado |
+| Salas ao vivo abertas ao mesmo tempo (aulas ao vivo e monitorias) | Plano contratado |
 
 ## Acompanhar
 
@@ -29,3 +25,39 @@ falha.
 O comportamento é sempre o mesmo: **o que já existe continua funcionando**, e o
 que fica bloqueado é criar mais. Aluno no limite não perde acesso ao curso;
 você é que não consegue cadastrar mais até ajustar o plano.
+
+### Salas ao vivo
+
+Contam as aulas ao vivo e as salas de monitoria abertas ao mesmo tempo na
+escola. Com todas as salas do plano abertas, quem tenta abrir mais uma — ao
+clicar em **Iniciar transmissão** ou ao entrar primeiro numa monitoria — vê
+a mensagem:
+
+> Sua escola já está com N salas ao vivo abertas. Encerre uma para abrir outra.
+
+Quem já está numa sala não cai, e entrar numa sala que já está aberta
+continua funcionando. Assim que uma sala é encerrada, a vaga volta.
+
+## Limite de membros
+
+Contam no limite todas as pessoas que fazem parte da plataforma, de qualquer
+papel — alunos, professores, administradores e proprietários. Quem foi
+removido deixa de contar; quem está bloqueado continua contando, porque
+continua na plataforma.
+
+Em **Usuários**, o cabeçalho mostra quantos membros você tem e quantos o plano
+permite, por exemplo **38 de 60 membros usados**.
+
+Com o limite atingido:
+
+- **Cadastrar** uma pessoa e **enviar convite por e-mail** não são concluídos, e
+  a plataforma avisa: *Limite de membros do plano atingido. Fale com a Didaska
+  para ampliar.*
+- **Entrar por um convite** já enviado, ou por um link de convite, também não é
+  concluído enquanto não houver lugar.
+- **Importar uma planilha** que levaria a plataforma acima do limite não importa
+  ninguém: a plataforma diz quantas pessoas cabem e quantas a planilha traria.
+  Pessoas que já são membros não contam. Ajuste a planilha ou fale com a Didaska
+  para ampliar o limite.
+- **Compras no Marketplace** continuam funcionando: quem comprou um curso entra,
+  mesmo que a plataforma passe do limite.
