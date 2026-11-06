@@ -1,6 +1,6 @@
 ---
 title: Vender no Marketplace
-description: Cursos, arquivos, pacotes, serviços e Clubes de assinatura à venda na vitrine e em página pública, no cartão (Stripe) e no Pix (AbacatePay), com cupons e o relatório de vendas.
+description: Cursos, arquivos, pacotes, serviços e Clubes de assinatura à venda na vitrine e em página pública, no cartão (Stripe ou AbacatePay) e no Pix (AbacatePay), com cupons e o relatório de vendas.
 ---
 
 O **Marketplace** é onde a escola vende. Quem compra pode ser um **membro**,
@@ -29,10 +29,64 @@ Em **Gerenciar → Integrações → Pagamentos**:
 - **Pix — AbacatePay.** Cole a **chave da API** do AbacatePay da escola. A
   chave fica guardada cifrada e não aparece mais na tela. Depois, cadastre o
   webhook no painel do AbacatePay com o **endereço** e o **segredo** que a
-  tela mostra — é por ele que o Pix pago chega na hora. Chave de teste
-  (`abc_dev_…`) só recebe Pix de teste.
+  tela mostra — é por ele que o pagamento chega na hora. Chave de teste
+  (`abc_dev_…`) só recebe pagamentos de teste.
+- **Cartão — AbacatePay.** Sem o Stripe conectado, a AbacatePay também pode
+  cobrar o cartão. Veja [Cartão pela AbacatePay](#cartão-pela-abacatepay).
 
-Sem boleto e sem parcelamento.
+Ao criar a chave da API no painel do AbacatePay, marque as permissões:
+
+| Permissão | Para quê |
+| --- | --- |
+| `TRANSPARENT:CREATE` | Gerar o Pix e cobrar o cartão na página de compra |
+| `TRANSPARENT:READ` | Saber se o pagamento foi confirmado |
+| `CUSTOMER:READ` | Conferir a chave ao conectar |
+| `REFUND:CREATE` | Estornar uma venda pela tela de Vendas |
+
+Sem boleto. Parcelamento só no cartão pela AbacatePay.
+
+## Cartão pela AbacatePay
+
+Se a escola não usa o Stripe, a AbacatePay pode cobrar no cartão de crédito,
+**em até 12x**, na própria página de compra.
+
+<Steps>
+  <Step title="Peça o cartão à AbacatePay">
+    A conta da escola na AbacatePay precisa ter o pagamento com cartão
+    liberado. Isso é com a AbacatePay.
+  </Step>
+  <Step title="Copie a chave pública">
+    No painel da AbacatePay, em **Integração → Checkout próprio**, copie a
+    **chave pública** (começa com `pk_`). Use a chave pública de teste junto
+    com a chave da API de teste.
+  </Step>
+  <Step title="Ligue o cartão">
+    Em **Gerenciar → Integrações → Pagamentos → AbacatePay**, cole a chave em
+    **Chave Pública** e ligue **Aceitar Cartão pela AbacatePay**.
+  </Step>
+</Steps>
+
+Como funciona:
+
+- Vale para **compras avulsas** (curso, arquivo, pacote, serviço e créditos
+  de monitoria). Assinatura e Clube no cartão continuam pelo Stripe.
+- Com o **Stripe conectado**, o cartão da página de compra continua sendo o
+  do Stripe.
+- Quem compra digita o cartão num formulário seguro da AbacatePay: os dados
+  do cartão não passam pela plataforma. A AbacatePay exige também o **CPF ou
+  CNPJ** e o **celular**, que a página pede só nesse caso e envia direto à
+  AbacatePay, sem guardar.
+- Cada parcela precisa ter ao menos R$ 10,00. O valor total é o mesmo em
+  qualquer número de parcelas.
+- Se o banco pedir confirmação (3D Secure), ela aparece na própria tela.
+
+<Warning>
+  Se a conta da AbacatePay ainda não tiver o cartão liberado, a primeira
+  compra no cartão é recusada, quem compra é orientado a pagar com Pix e a
+  opção **se desliga sozinha**. Você recebe um aviso, e a página da
+  AbacatePay em Integrações mostra o motivo. Depois que a AbacatePay liberar
+  o cartão, ligue a opção de novo.
+</Warning>
 
 ## Os tipos de produto
 
@@ -69,8 +123,10 @@ desconto vale na compra, que é uma cobrança só.
 ## Como a compra acontece
 
 1. A pessoa escolhe a forma e, se tiver, o cupom; o preço é calculado na hora.
-2. **Cartão:** ela paga na página segura do Stripe. **Pix:** o QR Code e o
-   copia-e-cola aparecem na própria página, valendo 30 minutos.
+2. **Cartão pelo Stripe:** ela paga na página segura do Stripe. **Cartão pela
+   AbacatePay:** ela preenche o cartão, o CPF ou CNPJ, o celular e as
+   parcelas na própria página. **Pix:** o QR Code e o copia-e-cola aparecem
+   na própria página, valendo 30 minutos.
 3. Quando o pagamento é confirmado, o acesso é liberado e ela recebe o
    e-mail **Compra confirmada** (com o comprovante, no cartão). Quem
    conectou o gateway recebe **Nova venda**. O texto da **Compra confirmada**
@@ -85,8 +141,8 @@ da compra e um link para definir a senha.
 Na vitrine, quem compra no cartão vê a caixa **"Salvar este cartão para
 compras futuras"**, já marcada. Desmarcada, nada fica salvo. O cartão fica
 guardado **na conta Stripe da escola** — a Didaska guarda só a bandeira, o
-final e a validade, nunca o número. Pix e a página pública (quem compra sem
-conta) não salvam cartão.
+final e a validade, nunca o número. Pix, o cartão pela AbacatePay e a página
+pública (quem compra sem conta) não salvam cartão.
 
 Na próxima compra, o produto mostra **"Pagar com Visa final 4242"**: um
 clique cobra o cartão salvo, inclusive em assinatura. Se o banco pedir
@@ -105,10 +161,17 @@ os arquivos para baixar e o serviço.
 
 ## Reembolso e contestação
 
-O reembolso é feito **no painel do gateway** (Stripe ou AbacatePay). Quando
-ele chega, ou quando o pagamento é contestado, o acesso sai: a matrícula
-(se nenhuma outra compra der o mesmo curso), os arquivos e o serviço. A
-venda fica marcada como reembolsada ou contestada.
+A venda paga pela **AbacatePay** (cartão ou Pix) pode ser estornada em
+**Gerenciar → Marketplace → Vendas**, no botão **Estornar** da venda: o
+valor volta inteiro para quem comprou (a AbacatePay não estorna parte) e você
+pode escrever um motivo. Venda em contestação, ou sem saldo suficiente na
+conta da AbacatePay, não pode ser estornada — a tela diz o porquê. A venda do
+**Stripe** é reembolsada no painel do Stripe.
+
+Quando o estorno ou o reembolso acontece, ou quando o pagamento é
+contestado, o acesso sai: a matrícula (se nenhuma outra compra der o mesmo
+curso), os arquivos e o serviço. A venda fica marcada como reembolsada ou
+contestada. Se a escola ganhar a contestação, o acesso não volta sozinho.
 
 ## Vendas
 
