@@ -92,7 +92,8 @@
               "produto/pessoas/turmas",
               "produto/pessoas/prazo-da-matricula",
               "produto/pessoas/matricula-por-modulo",
-              "produto/pessoas/avisos-por-email"
+              "produto/pessoas/avisos-por-email",
+              "produto/pessoas/avisos-da-equipe"
             ]
           },
           {
