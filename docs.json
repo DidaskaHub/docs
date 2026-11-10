@@ -88,10 +88,12 @@
               "produto/pessoas/convidar-membros",
               "produto/pessoas/papeis-e-permissoes",
               "produto/pessoas/trocar-senha",
+              "produto/pessoas/apagar-a-conta",
               "produto/pessoas/turmas",
               "produto/pessoas/prazo-da-matricula",
               "produto/pessoas/matricula-por-modulo",
-              "produto/pessoas/avisos-por-email"
+              "produto/pessoas/avisos-por-email",
+              "produto/pessoas/avisos-da-equipe"
             ]
           },
           {
